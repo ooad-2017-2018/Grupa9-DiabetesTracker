@@ -1,0 +1,96 @@
+﻿<Page
+    x:Class="DiabetesTracker.BlankPage1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DiabetesTracker"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="panel.(Grid.Row)" Value="1"/>
+                        <Setter Target="panel.(Grid.Column)" Value="1" />
+                        <Setter Target="panel.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="panel.(Grid.RowSpan)" Value="3"/>                       
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="panel.(Grid.Row)" Value="1"/>
+                        <Setter Target="panel.(Grid.Column)" Value="1" />
+                        <Setter Target="panel.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="panel.(Grid.RowSpan)" Value="3"/>
+                        <Setter Target="dalje.(Margin)" Value="30,50"/>
+                        <Setter Target="panelDugmadi.Orientation" Value="Vertical"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackPanel Name="panel" Orientation="Vertical" Grid.ColumnSpan="1" Margin="0,1,0,0" Grid.RowSpan="3" Grid.Row="0" Grid.Column="1">
+                    <TextBlock Text="Ime:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="ImeTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+
+                    <TextBlock Text="Prezime:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="PrezimeTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+
+                    <TextBlock Text="Username:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="UsernameTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+
+                    <TextBlock Text="Password:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="PasswordTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+
+                    <TextBlock Text="Potvrda passworda:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="PotvrdaPasswordaTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+
+                    <TextBlock Text="E-mail:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="EmailTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+
+                    <TextBlock Text="JMBG:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+                    <TextBox x:Name="JMBGTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+
+                    <TextBlock Text="Spol" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+
+                    <StackPanel Name="panelDugmadi" Orientation="Horizontal" Margin="0,4,0,0">
+                        <RadioButton Name="muskiButton" Content="Muški" Margin="0,4" BorderBrush="#FF5172A1"></RadioButton>
+                        <RadioButton Name="zenskiButton" Content="Ženski" Margin="0,4" BorderBrush="#FF5172A1" HorizontalAlignment="Left"/>
+                    </StackPanel>
+
+                    <TextBlock Text="Datum rođenja" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+
+                    <CalendarDatePicker Name="DatumRodjenja" PlaceholderText="Izaberite datum" Margin="0,4,0,10" BorderBrush="#FF5172A1"></CalendarDatePicker>
+
+                    <Button x:Name="dalje" Content="Dalje" Background="#FF6189C5" Foreground="White" HorizontalAlignment="Right" Margin="80,50" Click="dalje_Click"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
+    </Grid>
+</Page>
