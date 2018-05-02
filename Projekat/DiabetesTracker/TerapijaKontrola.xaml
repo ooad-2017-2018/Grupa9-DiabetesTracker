@@ -7,18 +7,18 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="90"
-    d:DesignWidth="500">
+    d:DesignWidth="511">
 
-    <Grid Height="90" Width="500" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Height="90" Width="511" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.RowDefinitions>
             <RowDefinition Height="27"/>
             <RowDefinition Height="25"/>
             <RowDefinition Height="40"/>
         </Grid.RowDefinitions>
-        <TextBlock Text="Ostali lijekovi:" Grid.Row="0" FontWeight="Bold" Margin="4"></TextBlock>
-        <TextBlock Text="Naziv:" Grid.Row="1" Margin="4"></TextBlock>
-        <TextBox Grid.Row="2" BorderBrush="#FF6189C5" Height="30" Margin="4" VerticalAlignment="Top" Width="250" HorizontalAlignment="Left"></TextBox>
+        <TextBlock Text="Ostali lijekovi:" Grid.Row="0" FontWeight="Bold" Margin="4,0,4,0"></TextBlock>
+        <TextBlock Text="Naziv:" Grid.Row="1" Margin="4,0,4,0"></TextBlock>
+        <TextBox Grid.Row="2" BorderBrush="#FF6189C5" Height="30" Margin="4,4,4,0" VerticalAlignment="Top" Width="250" HorizontalAlignment="Left"></TextBox>
     </Grid>
    
 

@@ -712,3 +712,8 @@ C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\UsernameIPasswordUserControl.xbf
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.g.i.cs
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.g.cs
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xaml
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xbf
