@@ -132,23 +132,25 @@ namespace DiabetesTracker.DiabetesTracker_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[7];
+            _typeNameTable = new string[8];
             _typeNameTable[0] = "DiabetesTracker.NivoGlukoze";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "DiabetesTracker.BlankPage1";
             _typeNameTable[4] = "DiabetesTracker.MainPage";
             _typeNameTable[5] = "DiabetesTracker.Registracija2";
-            _typeNameTable[6] = "DiabetesTracker.Terapija";
+            _typeNameTable[6] = "DiabetesTracker.TerapijaKontrola";
+            _typeNameTable[7] = "DiabetesTracker.Terapija";
 
-            _typeTable = new global::System.Type[7];
+            _typeTable = new global::System.Type[8];
             _typeTable[0] = typeof(global::DiabetesTracker.NivoGlukoze);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::DiabetesTracker.BlankPage1);
             _typeTable[4] = typeof(global::DiabetesTracker.MainPage);
             _typeTable[5] = typeof(global::DiabetesTracker.Registracija2);
-            _typeTable[6] = typeof(global::DiabetesTracker.Terapija);
+            _typeTable[6] = typeof(global::DiabetesTracker.TerapijaKontrola);
+            _typeTable[7] = typeof(global::DiabetesTracker.Terapija);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -187,7 +189,8 @@ namespace DiabetesTracker.DiabetesTracker_XamlTypeInfo
         private object Activate_3_BlankPage1() { return new global::DiabetesTracker.BlankPage1(); }
         private object Activate_4_MainPage() { return new global::DiabetesTracker.MainPage(); }
         private object Activate_5_Registracija2() { return new global::DiabetesTracker.Registracija2(); }
-        private object Activate_6_Terapija() { return new global::DiabetesTracker.Terapija(); }
+        private object Activate_6_TerapijaKontrola() { return new global::DiabetesTracker.TerapijaKontrola(); }
+        private object Activate_7_Terapija() { return new global::DiabetesTracker.Terapija(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -235,9 +238,16 @@ namespace DiabetesTracker.DiabetesTracker_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 6:   //  DiabetesTracker.Terapija
+            case 6:   //  DiabetesTracker.TerapijaKontrola
+                userType = new global::DiabetesTracker.DiabetesTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
+                userType.Activator = Activate_6_TerapijaKontrola;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 7:   //  DiabetesTracker.Terapija
                 userType = new global::DiabetesTracker.DiabetesTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_Terapija;
+                userType.Activator = Activate_7_Terapija;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

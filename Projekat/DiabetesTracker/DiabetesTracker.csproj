@@ -111,6 +111,9 @@
     <Compile Include="Terapija.xaml.cs">
       <DependentUpon>Terapija.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TerapijaKontrola.xaml.cs">
+      <DependentUpon>TerapijaKontrola.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -150,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Terapija.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TerapijaKontrola.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

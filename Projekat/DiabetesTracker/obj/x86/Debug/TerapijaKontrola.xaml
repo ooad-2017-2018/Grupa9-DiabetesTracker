@@ -1,0 +1,23 @@
+﻿<UserControl
+    x:Class="DiabetesTracker.TerapijaKontrola"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DiabetesTracker"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="80"
+    d:DesignWidth="1000">
+
+    <Grid Height="80" Width="1000" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock Text="Ostali lijekovi:" Foreground ="Black" TextWrapping="Wrap" Margin="4,-20,4,40" TextAlignment="Left" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
+        <TextBlock Text="Naziv:" TextWrapping="Wrap" Foreground ="Black" Margin="4,0,4,20"  TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
+        <TextBox x:ConnectionId='1' x:Name="NazivLijeka" Margin="4,45,492,2" BorderBrush="#FF6189C5"/>
+    </Grid>
+   
+
+
+
+
+</UserControl>
+

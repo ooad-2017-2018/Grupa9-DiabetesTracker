@@ -50,5 +50,15 @@ namespace DiabetesTracker
         {
             this.Frame.Navigate(typeof(NivoGlukoze));
         }
+
+        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void TerapijaKontrola_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
