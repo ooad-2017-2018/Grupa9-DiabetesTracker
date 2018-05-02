@@ -18422,7 +18422,7 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "2RI4q8FfR0S50V4YdZIZtzfyA2Bo4+jJHQXG+TDN7D4mPrFiIswIq8HVeDWS9xZsDwz23z7d/T2qi4rZa60Sig==",
+      "sha512": "svqEclOg2g3pmsVen1/sCCsozefwISlHQcB/Y5yxqovG6tx+LIxN0XtGH4XSieLbf5PbzVIXmHoPPrWb0QhuaA==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
@@ -25729,32 +25729,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zerin\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
+    "C:\\Users\\cico\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zerin\\Desktop\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
+      "projectUniqueName": "C:\\Users\\cico\\source\\repos\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
       "projectName": "DiabetesTracker",
-      "projectPath": "C:\\Users\\zerin\\Desktop\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
-      "packagesPath": "C:\\Users\\zerin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zerin\\Desktop\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\obj\\",
+      "projectPath": "C:\\Users\\cico\\source\\repos\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
+      "packagesPath": "C:\\Users\\cico\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cico\\source\\repos\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\zerin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\cico\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "uap10.0.10586"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -25768,7 +25763,7 @@
         "dependencies": {
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
-            "version": "[6.0.1, )"
+            "version": "6.0.1"
           }
         }
       }

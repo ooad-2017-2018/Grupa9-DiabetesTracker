@@ -114,6 +114,9 @@
     <Compile Include="TerapijaKontrola.xaml.cs">
       <DependentUpon>TerapijaKontrola.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UsernameIPasswordUserControl.xaml.cs">
+      <DependentUpon>UsernameIPasswordUserControl.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -157,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TerapijaKontrola.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsernameIPasswordUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

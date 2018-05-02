@@ -92,6 +92,9 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="Children" />
     </RootType>
+    <RootType FullName="DiabetesTracker.UsernameIPasswordUserControl">
+      <RootProperty Name="Height" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
       <RootProperty Name="Name" />
       <RootProperty Name="PlaceholderText" />
