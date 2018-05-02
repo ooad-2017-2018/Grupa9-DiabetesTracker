@@ -6,13 +6,19 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    d:DesignHeight="80"
-    d:DesignWidth="1000">
+    d:DesignHeight="90"
+    d:DesignWidth="500">
 
-    <Grid Height="80" Width="1000" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBlock Text="Ostali lijekovi:" Foreground ="Black" TextWrapping="Wrap" Margin="4,-20,4,40" TextAlignment="Left" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"/>
-        <TextBlock Text="Naziv:" TextWrapping="Wrap" Foreground ="Black" Margin="4,0,4,20"  TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
-        <TextBox x:Name="NazivLijeka" Margin="4,45,492,2" BorderBrush="#FF6189C5"/>
+    <Grid Height="90" Width="500" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="27"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Ostali lijekovi:" Grid.Row="0" FontWeight="Bold" Margin="4"></TextBlock>
+        <TextBlock Text="Naziv:" Grid.Row="1" Margin="4"></TextBlock>
+        <TextBox Grid.Row="2" BorderBrush="#FF6189C5" Height="30" Margin="4" VerticalAlignment="Top" Width="250" HorizontalAlignment="Left"></TextBox>
     </Grid>
    
 

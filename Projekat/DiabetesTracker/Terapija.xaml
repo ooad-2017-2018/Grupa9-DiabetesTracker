@@ -63,9 +63,9 @@
                     <RadioButton Content="Neinzulinska terapija" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" BorderBrush="Transparent"/>
                     <RadioButton Content="Inzulinske injekcije" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" BorderBrush="Transparent"/>
                     <RadioButton Content="Inzulinska pumpa" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" BorderBrush="Transparent"/>
-                    <local:TerapijaKontrola Loaded="TerapijaKontrola_Loaded" Height="99"/>
-                    <TextBlock Text="Doza:" TextWrapping="Wrap" Margin="4"  TextAlignment="Left" VerticalAlignment="Center" FontSize="16"></TextBlock>
-                    <TextBox x:Name="DozaLijeka" Margin="4" BorderBrush="#FF6189C5"></TextBox>
+                    <local:TerapijaKontrola Loaded="TerapijaKontrola_Loaded" Height="115"/>
+                    <TextBlock Text="Doza:" TextWrapping="Wrap"  Margin="4" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"></TextBlock>
+                    <TextBox x:Name="DozaLijeka"  BorderBrush="#FF6189C5" Margin="4" Width="250" HorizontalAlignment="Left"></TextBox>
                     <Button x:Name="Dalje1" Content="Dalje" Background="#FF6189C5" Foreground="White"  HorizontalAlignment="Right" Margin="4" Width="70" Click="Dalje1_Click_1"/>
                     
 
