@@ -469,6 +469,11 @@ C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\D
 C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\TerapijaKontrola.g.cs
 C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\TerapijaKontrola.xaml
 C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\TerapijaKontrola.xbf
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\UsernameIPasswordUserControl.xbf
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.g.i.cs
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.g.cs
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xaml
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xbf
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\App.xbf
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\NivoGlukoze.xbf
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\Registracija1.xbf
@@ -617,7 +622,6 @@ C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.g.i.cs
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.g.cs
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\XamlTypeInfo.g.cs
-C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xaml
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\App.xaml
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\NivoGlukoze.xaml
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\Registracija1.xaml
@@ -625,7 +629,7 @@ C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\Registracija2.xaml
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\Terapija.xaml
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\TerapijaKontrola.xaml
-C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xbf
+C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xaml
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\App.xbf
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\NivoGlukoze.xbf
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\Registracija1.xbf
@@ -633,8 +637,10 @@ C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\Registracija2.xbf
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\Terapija.xbf
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\TerapijaKontrola.xbf
+C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xbf
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\XamlSaveStateFile.xml
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\DiabetesTracker.csproj.CoreCompileInputs.cache
+C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\DiabetesTracker.csproj.CopyComplete
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\DiabetesTracker.exe
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\DiabetesTracker.pdb
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\ResourceHandlingTask.state
@@ -712,8 +718,3 @@ C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\ProjectArchitectures.txt
-C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\UsernameIPasswordUserControl.xbf
-C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.g.i.cs
-C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.g.cs
-C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xaml
-C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\UsernameIPasswordUserControl.xbf
