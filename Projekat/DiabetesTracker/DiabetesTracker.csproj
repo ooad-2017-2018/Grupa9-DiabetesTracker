@@ -98,6 +98,7 @@
     <Compile Include="NivoGlukoze.xaml.cs">
       <DependentUpon>NivoGlukoze.xaml</DependentUpon>
     </Compile>
+    <Compile Include="probna.cs" />
     <Compile Include="Registracija1.xaml.cs">
       <DependentUpon>Registracija1.xaml</DependentUpon>
     </Compile>
