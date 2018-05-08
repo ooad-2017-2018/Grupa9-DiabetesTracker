@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiabetesTracker.Model
 {
-    abstract class Dnevni_unos
+    public abstract class Dnevni_unos
     {
         DateTime datum;
         Kategorije tipKategorije;

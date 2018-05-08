@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiabetesTracker.Model
 {
-    class Namirnica
+    public class Namirnica
     {
         String vrsta;
         Double secer, ugljikohidrati, masti;

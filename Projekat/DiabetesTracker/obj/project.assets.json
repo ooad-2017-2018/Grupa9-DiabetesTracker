@@ -2,6 +2,20 @@
   "version": 3,
   "targets": {
     "UAP,Version=v10.0.10586": {
+      "Microsoft.Azure.Mobile.Client/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -2277,6 +2291,20 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-arm": {
+      "Microsoft.Azure.Mobile.Client/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -4631,6 +4659,20 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-arm-aot": {
+      "Microsoft.Azure.Mobile.Client/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -7021,6 +7063,20 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x64": {
+      "Microsoft.Azure.Mobile.Client/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -9384,6 +9440,20 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x64-aot": {
+      "Microsoft.Azure.Mobile.Client/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -11783,6 +11853,20 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x86": {
+      "Microsoft.Azure.Mobile.Client/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -14146,6 +14230,20 @@
       }
     },
     "UAP,Version=v10.0.10586/win10-x86-aot": {
+      "Microsoft.Azure.Mobile.Client/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.3",
+          "Newtonsoft.Json": "9.0.1",
+          "System.Linq.Queryable": "4.0.1"
+        },
+        "compile": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll": {}
+        }
+      },
       "Microsoft.CSharp/4.0.1": {
         "type": "package",
         "dependencies": {
@@ -16546,6 +16644,28 @@
     }
   },
   "libraries": {
+    "Microsoft.Azure.Mobile.Client/4.0.2": {
+      "sha512": "FFHBqESmv/wKOz6rJh1cCT+jByny56nQ3u1LA8TEc21L1DxYga/CR7b/yx7100+4EQXTdkzLc0E5ScLcYNKhTQ==",
+      "type": "package",
+      "path": "microsoft.azure.mobile.client/4.0.2",
+      "files": [
+        "lib/monoandroid70/Microsoft.Azure.Mobile.Client.dll",
+        "lib/monoandroid70/Microsoft.Azure.Mobile.Client.xml",
+        "lib/net45/Microsoft.Azure.Mobile.Client.dll",
+        "lib/net45/Microsoft.Azure.Mobile.Client.xml",
+        "lib/netstandard1.4/Microsoft.Azure.Mobile.Client.dll",
+        "lib/netstandard1.4/Microsoft.Azure.Mobile.Client.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Azure.Mobile.Client.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Microsoft.Azure.Mobile.Client.xml",
+        "lib/uap10.0/Microsoft.Azure.Mobile.Client.dll",
+        "lib/uap10.0/Microsoft.Azure.Mobile.Client.pri",
+        "lib/uap10.0/Microsoft.Azure.Mobile.Client.xml",
+        "lib/xamarinios10/Microsoft.Azure.Mobile.Client.dll",
+        "lib/xamarinios10/Microsoft.Azure.Mobile.Client.xml",
+        "microsoft.azure.mobile.client.4.0.2.nupkg.sha512",
+        "microsoft.azure.mobile.client.nuspec"
+      ]
+    },
     "Microsoft.CSharp/4.0.1": {
       "sha512": "17h8b5mXa87XYKrrVqdgZ38JefSUqLChUQpXgSnpzsM0nDOhE40FTeNWOJ/YmySGV6tG6T8+hjz6vxbknHJr6A==",
       "type": "package",
@@ -17506,10 +17626,10 @@
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-arm/1.7.0",
       "files": [
+        "Microsoft.Net.Native.SharedLibrary-arm.1.7.0.nupkg.sha512",
+        "Microsoft.Net.Native.SharedLibrary-arm.nuspec",
         "build/Microsoft.Net.Native.SharedLibrary-arm.props",
         "build/Microsoft.Net.Native.SharedLibrary-arm.targets",
-        "microsoft.net.native.sharedlibrary-arm.1.7.0.nupkg.sha512",
-        "microsoft.net.native.sharedlibrary-arm.nuspec",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltoc",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltocpdb",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.iltoc",
@@ -17904,10 +18024,10 @@
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-x64/1.7.0",
       "files": [
+        "Microsoft.Net.Native.SharedLibrary-x64.1.7.0.nupkg.sha512",
+        "Microsoft.Net.Native.SharedLibrary-x64.nuspec",
         "build/Microsoft.Net.Native.SharedLibrary-x64.props",
         "build/Microsoft.Net.Native.SharedLibrary-x64.targets",
-        "microsoft.net.native.sharedlibrary-x64.1.7.0.nupkg.sha512",
-        "microsoft.net.native.sharedlibrary-x64.nuspec",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltoc",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltocpdb",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.iltoc",
@@ -18302,10 +18422,10 @@
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-x86/1.7.0",
       "files": [
+        "Microsoft.Net.Native.SharedLibrary-x86.1.7.0.nupkg.sha512",
+        "Microsoft.Net.Native.SharedLibrary-x86.nuspec",
         "build/Microsoft.Net.Native.SharedLibrary-x86.props",
         "build/Microsoft.Net.Native.SharedLibrary-x86.targets",
-        "microsoft.net.native.sharedlibrary-x86.1.7.0.nupkg.sha512",
-        "microsoft.net.native.sharedlibrary-x86.nuspec",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltoc",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.Concurrent.iltocpdb",
         "tools/SharedLibrary/chk/AnalysisILToc/System.Collections.iltoc",
@@ -26244,6 +26364,7 @@
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.10586": [
+      "Microsoft.Azure.Mobile.Client >= 4.0.2",
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.1",
       "WinUX.UWP >= 2.4.17005.1"
     ]
@@ -26286,6 +26407,10 @@
     "frameworks": {
       "uap10.0.10586": {
         "dependencies": {
+          "Microsoft.Azure.Mobile.Client": {
+            "target": "Package",
+            "version": "[4.0.2, )"
+          },
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.0.1, )"
@@ -26317,5 +26442,13 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\zerin\\Desktop\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\obj\\DiabetesTracker.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

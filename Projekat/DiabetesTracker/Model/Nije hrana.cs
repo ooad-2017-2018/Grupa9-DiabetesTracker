@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiabetesTracker.Model
 {
-    class Nije_hrana: Dnevni_unos
+    public class Nije_hrana: Dnevni_unos
     {
         TipUnosa tip;
         Double vrijednost;

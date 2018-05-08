@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Microsoft.WindowsAzure.MobileServices;
+
 namespace DiabetesTracker
 {
     /// <summary>
@@ -31,6 +33,9 @@ namespace DiabetesTracker
             this.InitializeComponent();
             this.Suspending += OnSuspending;
         }
+
+
+        public static MobileServiceClient MobileService = new MobileServiceClient("https://DiabetesTrack.azurewebsites.net");
 
         /// <summary>
         /// Invoked when the application is launched normally by the end user.  Other entry points
