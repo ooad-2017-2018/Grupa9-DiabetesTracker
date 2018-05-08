@@ -26,13 +26,9 @@ namespace DiabetesTracker
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
     public sealed partial class MainPage : Page
-    {
-<<<<<<< HEAD:Projekat/DiabetesTracker/View/Prijava.xaml.cs
-       
-=======
-        IMobileServiceTable<Korisnik> tabelaKorisnik = App.MobileService.GetTable<Korisnik>();
+    {      
 
->>>>>>> 4930858256b1312aeb8be64d6f5719ebfe105598:Projekat/DiabetesTracker/Prijava.xaml.cs
+        IMobileServiceTable<Korisnik> tabelaKorisnik = App.MobileService.GetTable<Korisnik>();
         public MainPage()
         {
             this.InitializeComponent();

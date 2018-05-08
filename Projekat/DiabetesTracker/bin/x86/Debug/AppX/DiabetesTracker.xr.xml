@@ -41,7 +41,6 @@
       <RootProperty Name="FontStyle" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="TextAlignment" />
-      <RootProperty Name="TextDecorations" />
       <RootProperty Name="Width" />
       <RootProperty Name="FontWeight" />
       <RootEvent Name="SelectionChanged" />
@@ -111,6 +110,14 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="DiabetesTracker.BlankPage1" />
+    <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
+      <RootProperty Name="Content" />
+      <RootProperty Name="Foreground" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootEvent Name="Click" />
+    </RootType>
     <RootType FullName="DiabetesTracker.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="ItemsSource" />
