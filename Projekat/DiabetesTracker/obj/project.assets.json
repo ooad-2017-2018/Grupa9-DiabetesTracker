@@ -26370,24 +26370,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\zerin\\.nuget\\packages\\": {},
+    "C:\\Users\\cico\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zerin\\Desktop\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
+      "projectUniqueName": "C:\\Users\\cico\\source\\repos\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
       "projectName": "DiabetesTracker",
-      "projectPath": "C:\\Users\\zerin\\Desktop\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
-      "packagesPath": "C:\\Users\\zerin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zerin\\Desktop\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\obj\\",
+      "projectPath": "C:\\Users\\cico\\source\\repos\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
+      "packagesPath": "C:\\Users\\cico\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cico\\source\\repos\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\zerin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\cico\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -26442,13 +26442,5 @@
         "#import": []
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\zerin\\Desktop\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\obj\\DiabetesTracker.csproj.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
