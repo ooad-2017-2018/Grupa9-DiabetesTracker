@@ -23,5 +23,17 @@ namespace DiabetesTracker
         {
             this.InitializeComponent();
         }
+
+        public string Username
+        {
+            get { return UsernameTextBox.Text; }
+            set { UsernameTextBox.Text = value; }
+        }
+
+        public string Password
+        {
+            get { return PasswordTextBox.Text; }
+            set { PasswordTextBox.Text = value; }
+        }
     }
 }

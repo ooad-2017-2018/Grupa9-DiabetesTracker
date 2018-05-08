@@ -10,7 +10,7 @@
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>86ef1e8c-dccc-4ea0-b701-0a01b79adbe8</PackageIdentityName>
     <PackageIdentityPublisher>CN=cico</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
@@ -18,7 +18,7 @@
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
-    <LayoutDir>C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\AppX</LayoutDir>
+    <LayoutDir>C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\AppX</LayoutDir>
     <RegisteredManifestChecksum>E778DE343E6EA84AD7521AEE100F14529A338631F3F731ADDF578220428AA969</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>86ef1e8c-dccc-4ea0-b701-0a01b79adbe8_1.0.0.0_x86__h98dtqcz9nj1m</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>86ef1e8c-dccc-4ea0-b701-0a01b79adbe8_h98dtqcz9nj1m!App</RegisteredUserModeAppID>
@@ -28,16 +28,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-08T14:42:34.364</Modified>
+      <Modified>2018-05-08T20:24:49.181</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\DiabetesTracker.exe">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\DiabetesTracker.exe">
       <PackagePath>entrypoint\DiabetesTracker.exe</PackagePath>
-      <Modified>2018-05-08T14:42:32.279</Modified>
+      <Modified>2018-05-08T20:24:42.204</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cico\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -523,60 +523,60 @@
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
       <Modified>2016-08-09T06:14:36.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2018-05-05T10:54:43.513</Modified>
+      <Modified>2018-05-08T14:59:51.043</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
-      <Modified>2018-05-05T10:54:43.485</Modified>
+      <Modified>2018-05-08T14:59:50.992</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-05T10:54:43.487</Modified>
+      <Modified>2018-05-08T14:59:50.993</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-05T10:54:43.489</Modified>
+      <Modified>2018-05-08T14:59:50.995</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-05T10:54:43.491</Modified>
+      <Modified>2018-05-08T14:59:50.997</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-05T10:54:43.493</Modified>
+      <Modified>2018-05-08T14:59:50.999</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-05T10:54:43.494</Modified>
+      <Modified>2018-05-08T14:59:51.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-05T10:54:43.496</Modified>
+      <Modified>2018-05-08T14:59:51.002</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\DiabetesTracker.xr.xml">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\DiabetesTracker.xr.xml">
       <PackagePath>DiabetesTracker.xr.xml</PackagePath>
-      <Modified>2018-05-08T14:39:40.165</Modified>
+      <Modified>2018-05-08T14:59:53.594</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-11-10T16:15:50.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-08T14:39:44.346</Modified>
+      <Modified>2018-05-08T20:24:45.430</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\Core\DiabetesTracker.exe">
+    <AppxPackagedFile Include="C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\Core\DiabetesTracker.exe">
       <PackagePath>DiabetesTracker.exe</PackagePath>
-      <Modified>2018-05-08T14:42:34.351</Modified>
+      <Modified>2018-05-08T20:24:49.168</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

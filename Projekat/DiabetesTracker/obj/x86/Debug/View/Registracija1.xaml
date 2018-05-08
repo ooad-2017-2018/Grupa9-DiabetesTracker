@@ -62,29 +62,29 @@
                     <TextBlock Text="Prezime:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
                     <TextBox x:ConnectionId='6' x:Name="PrezimeTextBox" Margin="4" BorderBrush="#FF6189C5"/>
 
-                    <local:UsernameIPasswordUserControl Height="200"/>
+                    <local:UsernameIPasswordUserControl x:ConnectionId='7' x:Name="UserNameIPasswordTextBox" Height="200"/>
 
                     <TextBlock Text="Potvrda passworda:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
-                    <TextBox x:ConnectionId='7' x:Name="PotvrdaPasswordaTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+                    <TextBox x:ConnectionId='8' x:Name="PotvrdaPasswordaTextBox" Margin="4" BorderBrush="#FF6189C5"/>
 
                     <TextBlock Text="E-mail:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
-                    <TextBox x:ConnectionId='8' x:Name="EmailTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+                    <TextBox x:ConnectionId='9' x:Name="EmailTextBox" Margin="4" BorderBrush="#FF6189C5"/>
 
                     <TextBlock Text="JMBG:" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
-                    <TextBox x:ConnectionId='9' x:Name="JMBGTextBox" Margin="4" BorderBrush="#FF6189C5"/>
+                    <TextBox x:ConnectionId='10' x:Name="JMBGTextBox" Margin="4" BorderBrush="#FF6189C5"/>
 
                     <TextBlock Text="Spol" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
 
-                    <StackPanel x:ConnectionId='10' Name="panelDugmadi" Orientation="Horizontal" Margin="0,4,0,0">
-                        <RadioButton x:ConnectionId='13' Name="muskiButton" Content="Muški" Margin="0,4" BorderBrush="#FF5172A1"></RadioButton>
-                        <RadioButton x:ConnectionId='14' Name="zenskiButton" Content="Ženski" Margin="0,4" BorderBrush="#FF5172A1" HorizontalAlignment="Left"/>
+                    <StackPanel x:ConnectionId='11' Name="panelDugmadi" Orientation="Horizontal" Margin="0,4,0,0">
+                        <RadioButton x:ConnectionId='14' Name="muskiButton" Content="Muški" Margin="0,4" BorderBrush="#FF5172A1"></RadioButton>
+                        <RadioButton x:ConnectionId='15' Name="zenskiButton" Content="Ženski" Margin="0,4" BorderBrush="#FF5172A1" HorizontalAlignment="Left"/>
                     </StackPanel>
 
                     <TextBlock Text="Datum rođenja" Margin="0,20,0,10" TextWrapping="Wrap" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"/>
 
-                    <CalendarDatePicker x:ConnectionId='11' Name="DatumRodjenja" PlaceholderText="Izaberite datum" Margin="0,4,0,10" BorderBrush="#FF5172A1"></CalendarDatePicker>
+                    <CalendarDatePicker x:ConnectionId='12' Name="DatumRodjenja" PlaceholderText="Izaberite datum" Margin="0,4,0,10" BorderBrush="#FF5172A1"></CalendarDatePicker>
 
-                    <Button x:ConnectionId='12' x:Name="dalje" Content="Dalje" Background="#FF6189C5" Foreground="White" HorizontalAlignment="Right" Margin="80,50"                    />
+                    <Button x:ConnectionId='13' x:Name="dalje" Content="Dalje" Background="#FF6189C5" Foreground="White" HorizontalAlignment="Right" Margin="80,50"                    />
                 </StackPanel>
             </Grid>
         </ScrollViewer>

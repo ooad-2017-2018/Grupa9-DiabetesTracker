@@ -10,6 +10,7 @@ namespace DiabetesTracker.Model
 {
     public class Osoba:INotifyPropertyChanged, INotifyDataErrorInfo
     {
+        String id;
         String ime;
         String prezime;
         String username;
@@ -19,6 +20,7 @@ namespace DiabetesTracker.Model
         String JMBG;
         DateTime datumRodjenja;
 
+        public string Id { get => id; set => id = value; }
         public virtual string Ime { get => ime; set => ime = value; }
         public virtual string Prezime { get => prezime; set => prezime = value; }
         public virtual string Username { get => username; set => username = value; }

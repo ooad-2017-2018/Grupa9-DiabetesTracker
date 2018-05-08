@@ -112,6 +112,7 @@
     <Compile Include="Model\TipPodsjetnika.cs" />
     <Compile Include="Model\TipTerapije.cs" />
     <Compile Include="Model\TipUnosa.cs" />
+    <Compile Include="Pomocna.cs" />
     <Compile Include="ViewModel\AdminVIewModel.cs" />
     <Compile Include="ViewModel\DoktorViewModel.cs" />
     <Compile Include="ViewModel\KorisnikViewModel.cs" />

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DiabetesTracker.Model
 {
     public class Korisnik:Osoba
-    {
+    {        
         String tipDijabetesa;
         Double visina;
         Double tezina;
@@ -21,7 +21,7 @@ namespace DiabetesTracker.Model
         List<Nalaz> nalazi;
         List<Podsjetnik> podsjetnici;
         Terapija terapija;
-
+        
         public string TipDijabetesa { get => tipDijabetesa; set => tipDijabetesa = value; }
         public double Visina { get => visina; set => visina = value; }
         public double Tezina { get => tezina; set => tezina = value; }
@@ -36,6 +36,7 @@ namespace DiabetesTracker.Model
         public Terapija Terapija { get => terapija; set => terapija = value; }
 
         public List<Podsjetnik> Podsjetnici { get => podsjetnici; set => podsjetnici = value; }
+        
 
         public void dodajDnevniUnos(Dnevni_unos dnevniUnos)
         {

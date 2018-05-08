@@ -1,1 +1,1 @@
-C:\Users\cico\source\repos\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\DiabetesTracker.csproj;x86
+C:\Users\cico\Documents\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\DiabetesTracker.csproj;x86

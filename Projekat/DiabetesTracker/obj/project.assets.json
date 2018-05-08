@@ -26376,11 +26376,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cico\\source\\repos\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
+      "projectUniqueName": "C:\\Users\\cico\\Documents\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
       "projectName": "DiabetesTracker",
-      "projectPath": "C:\\Users\\cico\\source\\repos\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
+      "projectPath": "C:\\Users\\cico\\Documents\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\DiabetesTracker.csproj",
       "packagesPath": "C:\\Users\\cico\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cico\\source\\repos\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\obj\\",
+      "outputPath": "C:\\Users\\cico\\Documents\\Grupa9-DiabetesTracker\\Projekat\\DiabetesTracker\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
