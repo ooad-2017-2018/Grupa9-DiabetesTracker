@@ -1,8 +1,8 @@
 App.xbf
-NivoGlukoze.xbf
-Prijava.xbf
-Registracija1.xbf
-Registracija2.xbf
-Terapija.xbf
-TerapijaKontrola.xbf
-UsernameIPasswordUserControl.xbf
+View\NivoGlukoze.xbf
+View\Prijava.xbf
+View\Registracija1.xbf
+View\Registracija2.xbf
+View\Terapija.xbf
+View\TerapijaKontrola.xbf
+View\UsernameIPasswordUserControl.xbf

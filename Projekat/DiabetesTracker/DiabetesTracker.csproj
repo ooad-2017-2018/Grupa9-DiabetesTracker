@@ -104,26 +104,26 @@
     <Compile Include="Model\Ponavljanja.cs" />
     <Compile Include="Model\TipPodsjetnika.cs" />
     <Compile Include="Model\TipUnosa.cs" />
-    <Compile Include="NivoGlukoze.xaml.cs">
+    <Compile Include="View\NivoGlukoze.xaml.cs">
       <DependentUpon>NivoGlukoze.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Registracija1.xaml.cs">
+    <Compile Include="View\Registracija1.xaml.cs">
       <DependentUpon>Registracija1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Prijava.xaml.cs">
+    <Compile Include="View\Prijava.xaml.cs">
       <DependentUpon>Prijava.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registracija2.xaml.cs">
+    <Compile Include="View\Registracija2.xaml.cs">
       <DependentUpon>Registracija2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Terapija.xaml.cs">
+    <Compile Include="View\Terapija.xaml.cs">
       <DependentUpon>Terapija.xaml</DependentUpon>
     </Compile>
-    <Compile Include="TerapijaKontrola.xaml.cs">
+    <Compile Include="View\TerapijaKontrola.xaml.cs">
       <DependentUpon>TerapijaKontrola.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UsernameIPasswordUserControl.xaml.cs">
+    <Compile Include="View\UsernameIPasswordUserControl.xaml.cs">
       <DependentUpon>UsernameIPasswordUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModel\DnevniUnosViewModel.cs" />
@@ -152,31 +152,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="NivoGlukoze.xaml">
+    <Page Include="View\NivoGlukoze.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Registracija1.xaml">
+    <Page Include="View\Registracija1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Prijava.xaml">
+    <Page Include="View\Prijava.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Registracija2.xaml">
+    <Page Include="View\Registracija2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Terapija.xaml">
+    <Page Include="View\Terapija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="TerapijaKontrola.xaml">
+    <Page Include="View\TerapijaKontrola.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="UsernameIPasswordUserControl.xaml">
+    <Page Include="View\UsernameIPasswordUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -185,10 +185,11 @@
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.1</Version>
     </PackageReference>
+    <PackageReference Include="WinUX.UWP">
+      <Version>2.4.17005.1</Version>
+    </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="View\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

@@ -325,6 +325,15 @@
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
         }
       },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        }
+      },
       "runtime.native.System.IO.Compression/4.1.0": {
         "type": "package",
         "dependencies": {
@@ -2205,6 +2214,66 @@
             "rid": "aot"
           }
         }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {
+            "assetType": "native",
+            "rid": "win10-arm"
+          },
+          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {
+            "assetType": "native",
+            "rid": "win10-x64"
+          },
+          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {
+            "assetType": "native",
+            "rid": "win10-x86"
+          }
+        }
+      },
+      "WinUX.Common/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        },
+        "runtime": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        }
+      },
+      "WinUX.UWP/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.19.0",
+          "WinUX.Common": "2.4.17005.1",
+          "WriteableBitmapEx": "1.5.0"
+        },
+        "compile": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        }
+      },
+      "WriteableBitmapEx/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-arm": {
@@ -2478,6 +2547,15 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -4501,6 +4579,55 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "WinUX.Common/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        },
+        "runtime": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        }
+      },
+      "WinUX.UWP/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.19.0",
+          "WinUX.Common": "2.4.17005.1",
+          "WriteableBitmapEx": "1.5.0"
+        },
+        "compile": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        }
+      },
+      "WriteableBitmapEx/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-arm-aot": {
@@ -4775,6 +4902,15 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -6833,6 +6969,55 @@
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "WinUX.Common/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        },
+        "runtime": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        }
+      },
+      "WinUX.UWP/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.19.0",
+          "WinUX.Common": "2.4.17005.1",
+          "WriteableBitmapEx": "1.5.0"
+        },
+        "compile": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        }
+      },
+      "WriteableBitmapEx/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x64": {
@@ -7109,6 +7294,15 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -9138,6 +9332,55 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "WinUX.Common/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        },
+        "runtime": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        }
+      },
+      "WinUX.UWP/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.19.0",
+          "WinUX.Common": "2.4.17005.1",
+          "WriteableBitmapEx": "1.5.0"
+        },
+        "compile": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        }
+      },
+      "WriteableBitmapEx/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x64-aot": {
@@ -9415,6 +9658,15 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -11479,6 +11731,55 @@
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "WinUX.Common/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        },
+        "runtime": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        }
+      },
+      "WinUX.UWP/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.19.0",
+          "WinUX.Common": "2.4.17005.1",
+          "WriteableBitmapEx": "1.5.0"
+        },
+        "compile": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        }
+      },
+      "WriteableBitmapEx/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x86": {
@@ -11755,6 +12056,15 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.any.System.Collections/4.0.11": {
@@ -13784,6 +14094,55 @@
         "runtime": {
           "lib/netcore50/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "WinUX.Common/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        },
+        "runtime": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        }
+      },
+      "WinUX.UWP/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.19.0",
+          "WinUX.Common": "2.4.17005.1",
+          "WriteableBitmapEx": "1.5.0"
+        },
+        "compile": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        }
+      },
+      "WriteableBitmapEx/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        }
       }
     },
     "UAP,Version=v10.0.10586/win10-x86-aot": {
@@ -14061,6 +14420,15 @@
         },
         "compile": {
           "ref/netstandard1.3/Microsoft.Win32.Primitives.dll": {}
+        }
+      },
+      "Newtonsoft.Json/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll": {}
         }
       },
       "runtime.aot.System.Collections/4.0.10": {
@@ -16124,6 +16492,55 @@
         },
         "runtime": {
           "runtimes/aot/lib/netcore50/System.Xml.XmlSerializer.dll": {}
+        }
+      },
+      "Win2D.uwp/1.19.0": {
+        "type": "package",
+        "compile": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "runtime": {
+          "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        },
+        "native": {
+          "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "WinUX.Common/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        },
+        "runtime": {
+          "lib/portable46-net451+win81/WinUX.Common.dll": {}
+        }
+      },
+      "WinUX.UWP/2.4.17005.1": {
+        "type": "package",
+        "dependencies": {
+          "Win2D.uwp": "1.19.0",
+          "WinUX.Common": "2.4.17005.1",
+          "WriteableBitmapEx": "1.5.0"
+        },
+        "compile": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        },
+        "runtime": {
+          "lib/.NETCore50/WinUX.UWP.dll": {},
+          "lib/netcore50/WinUX.UWP.dll": {}
+        }
+      },
+      "WriteableBitmapEx/1.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
+        },
+        "runtime": {
+          "lib/NetCore45/WriteableBitmapEx.WinRT.dll": {}
         }
       }
     }
@@ -18797,6 +19214,30 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._"
+      ]
+    },
+    "Newtonsoft.Json/9.0.1": {
+      "sha512": "U82mHQSKaIk+lpSVCbWYKNavmNH1i5xrExDEquU1i6I5pV6UMOqRnJRSlKO3cMPfcpp0RgDY+8jUXHdQ4IfXvw==",
+      "type": "package",
+      "path": "newtonsoft.json/9.0.1",
+      "files": [
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+wp80+win8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.9.0.1.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "tools/install.ps1"
       ]
     },
     "runtime.any.System.Collections/4.0.11": {
@@ -25721,11 +26162,90 @@
         "system.xml.xmlserializer.4.0.11.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Win2D.uwp/1.19.0": {
+      "sha512": "pLL/gLb3uY75IlswAKzOvQnwwiGrMxZyBl2DbJOjuzG6SOWMp0sg+tkj+HZU8uyQ8jIdAbOE0Iu5+z9zyT5E6Q==",
+      "type": "package",
+      "path": "win2d.uwp/1.19.0",
+      "files": [
+        "Win2d.githash.txt",
+        "build/native/Win2D.uwp.targets",
+        "include/Microsoft.Graphics.Canvas.h",
+        "include/Microsoft.Graphics.Canvas.native.h",
+        "lib/uap10.0/Microsoft.Graphics.Canvas.winmd",
+        "lib/uap10.0/Microsoft.Graphics.Canvas.xml",
+        "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll",
+        "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll",
+        "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll",
+        "win2d.uwp.1.19.0.nupkg.sha512",
+        "win2d.uwp.nuspec"
+      ]
+    },
+    "WinUX.Common/2.4.17005.1": {
+      "sha512": "bXNyHciwiZK5eDgp5IuETTMn6dEnjA92ElSTR30lCUzl1zkks2WRTTqDSTWZLYxTj0E3bXhNd8h13e0BqQHApQ==",
+      "type": "package",
+      "path": "winux.common/2.4.17005.1",
+      "files": [
+        "lib/portable-net451+win81+MonoAndroid10+xamarinios10+MonoTouch10/WinUX.Common.XML",
+        "lib/portable-net451+win81+MonoAndroid10+xamarinios10+MonoTouch10/WinUX.Common.dll",
+        "lib/portable46-net451+win81/WinUX.Common.XML",
+        "lib/portable46-net451+win81/WinUX.Common.dll",
+        "winux.common.2.4.17005.1.nupkg.sha512",
+        "winux.common.nuspec"
+      ]
+    },
+    "WinUX.UWP/2.4.17005.1": {
+      "sha512": "I/lsLWdXh0hfnnxfhCJXPVGhfHJvHgOjYHzH893Ow5nK9k6zjZdRaS0ilo82Y7bzM7gS9eVat9KAzzO8Ufs/dQ==",
+      "type": "package",
+      "path": "winux.uwp/2.4.17005.1",
+      "files": [
+        "lib/.NETCore50/WinUX.UWP.XML",
+        "lib/.NETCore50/WinUX.UWP.dll",
+        "lib/netcore50/WinUX.UWP.XML",
+        "lib/netcore50/WinUX.UWP.dll",
+        "lib/netcore50/WinUX.UWP.pri",
+        "winux.uwp.2.4.17005.1.nupkg.sha512",
+        "winux.uwp.nuspec"
+      ]
+    },
+    "WriteableBitmapEx/1.5.0": {
+      "sha512": "K4g5wN6y4RhDUcfLdOoNZrQQBdv6dbXycaOoeBcS3qrXMhXssECb4K/3cPXehi+hDSwNx5dYLhRilk49DXiFZQ==",
+      "type": "package",
+      "path": "writeablebitmapex/1.5.0",
+      "files": [
+        "lib/NetCore45/WriteableBitmapEx.WinRT.dll",
+        "lib/NetCore45/WriteableBitmapEx.WinRT.pdb",
+        "lib/NetCore45/WriteableBitmapEx.WinRT.xml",
+        "lib/WindowsPhone8/WriteableBitmapExWinPhone.XML",
+        "lib/WindowsPhone8/WriteableBitmapExWinPhone.dll",
+        "lib/WindowsPhone8/WriteableBitmapExWinPhone.pdb",
+        "lib/WindowsPhone8/WriteableBitmapExWinPhoneXnaDependant.XML",
+        "lib/WindowsPhone8/WriteableBitmapExWinPhoneXnaDependant.dll",
+        "lib/WindowsPhone8/WriteableBitmapExWinPhoneXnaDependant.pdb",
+        "lib/net40/WriteableBitmapEx.Wpf.XML",
+        "lib/net40/WriteableBitmapEx.Wpf.dll",
+        "lib/net40/WriteableBitmapEx.Wpf.pdb",
+        "lib/sl4-wp71/WriteableBitmapExWinPhone.XML",
+        "lib/sl4-wp71/WriteableBitmapExWinPhone.dll",
+        "lib/sl4-wp71/WriteableBitmapExWinPhone.pdb",
+        "lib/sl4-wp71/WriteableBitmapExWinPhoneXnaDependant.XML",
+        "lib/sl4-wp71/WriteableBitmapExWinPhoneXnaDependant.dll",
+        "lib/sl4-wp71/WriteableBitmapExWinPhoneXnaDependant.pdb",
+        "lib/sl4/WriteableBitmapEx.XML",
+        "lib/sl4/WriteableBitmapEx.dll",
+        "lib/sl4/WriteableBitmapEx.pdb",
+        "lib/wpa81/WriteableBitmapEx.WinRT.dll",
+        "lib/wpa81/WriteableBitmapEx.WinRT.pdb",
+        "lib/wpa81/WriteableBitmapEx.WinRT.xml",
+        "writeablebitmapex.1.5.0.nupkg.sha512",
+        "writeablebitmapex.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "UAP,Version=v10.0.10586": [
-      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.1"
+      "Microsoft.NETCore.UniversalWindowsPlatform >= 6.0.1",
+      "WinUX.UWP >= 2.4.17005.1"
     ]
   },
   "packageFolders": {
@@ -25769,6 +26289,10 @@
           "Microsoft.NETCore.UniversalWindowsPlatform": {
             "target": "Package",
             "version": "[6.0.1, )"
+          },
+          "WinUX.UWP": {
+            "target": "Package",
+            "version": "[2.4.17005.1, )"
           }
         }
       }
