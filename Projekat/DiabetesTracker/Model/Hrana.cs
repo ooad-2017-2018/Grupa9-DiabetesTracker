@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiabetesTracker.Model
 {
-    class Hrana: Dnevni_unos
+    public class Hrana: Dnevni_unos
     {
         List<Namirnica> namirnice = new List<Namirnica>();
         List<int> kolicine = new List<int>();

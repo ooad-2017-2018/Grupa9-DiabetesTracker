@@ -95,14 +95,22 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Dnevni unos.cs" />
+    <Compile Include="Model\Doktor.cs" />
     <Compile Include="Model\Hrana.cs" />
     <Compile Include="Model\Kategorije.cs" />
+    <Compile Include="Model\Korisnik.cs" />
+    <Compile Include="Model\Nalaz.cs" />
     <Compile Include="Model\Namirnica.cs" />
     <Compile Include="Model\Nije hrana.cs" />
+    <Compile Include="Model\Osoba.cs" />
     <Compile Include="Model\Podsjetnik.cs" />
     <Compile Include="Model\Ponavljanja.cs" />
+    <Compile Include="Model\Spol.cs" />
+    <Compile Include="Model\Terapija.cs" />
     <Compile Include="Model\TipPodsjetnika.cs" />
+    <Compile Include="Model\TipTerapije.cs" />
     <Compile Include="Model\TipUnosa.cs" />
     <Compile Include="NivoGlukoze.xaml.cs">
       <DependentUpon>NivoGlukoze.xaml</DependentUpon>
@@ -182,6 +190,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.Azure.Mobile.Client">
+      <Version>4.0.2</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.0.1</Version>
     </PackageReference>

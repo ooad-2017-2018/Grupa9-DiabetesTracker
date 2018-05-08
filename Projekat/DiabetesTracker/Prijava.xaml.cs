@@ -15,6 +15,9 @@ using Windows.UI.Xaml.Navigation;
 using Windows.UI.ViewManagement;
 using Windows.UI;
 
+using Windows.UI.Popups;
+using DiabetesTracker.Model;
+using Microsoft.WindowsAzure.MobileServices;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 namespace DiabetesTracker
@@ -24,6 +27,8 @@ namespace DiabetesTracker
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        IMobileServiceTable<Korisnik> tabelaKorisnik = App.MobileService.GetTable<Korisnik>();
+
         public MainPage()
         {
             this.InitializeComponent();
@@ -54,7 +59,20 @@ namespace DiabetesTracker
         //iako se nakon pritska na dugme prijava ne prelazi na forme za registraciju, ovu funkcionalnost smo implementirali samo kako bi se sve forme mogle prelistati nakon pokretanja UWP-a
         private void Prijava_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(BlankPage1));    
+            try
+            {
+                Korisnik obj = new Korisnik();
+            }
+            catch (Exception ex)
+            {
+                MessageDialog msgDialogError = new MessageDialog("Error : " + ex.ToString());
+                msgDialogError.ShowAsync();
+            }
+        }
+
+        private void registerButtonHyperlink_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(BlankPage1));
         }
     }
 }

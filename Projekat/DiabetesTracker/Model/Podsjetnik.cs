@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DiabetesTracker.Model
 {
-    class Podsjetnik
+    public class Podsjetnik
     {
         TipPodsjetnika tip;
         DateTime datum;
