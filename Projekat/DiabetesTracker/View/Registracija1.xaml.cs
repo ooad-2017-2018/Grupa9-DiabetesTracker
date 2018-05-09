@@ -53,28 +53,47 @@ namespace DiabetesTracker
 
         private void dalje_Click(object sender, RoutedEventArgs e)
         {
-            Korisnik obj = new Korisnik();
+            /*Korisnik obj = new Korisnik();
             obj.Ime = ImeTextBox.Text;
             obj.Prezime = PrezimeTextBox.Text;
-
+            
             obj.EMail = EmailTextBox.Text;
+            */
+            Korisnik k;
             if (muskiButton.IsChecked == true)
             {
-                obj.Spol = Spol.Muski;
+                var date = DatumRodjenja.Date;
+                DateTime time = date.Value.DateTime;
+                k = new Korisnik
+                {
+                    Ime = ImeTextBox.Text,
+                    Prezime = PrezimeTextBox.Text,
+                    Username = UserNameIPasswordTextBox.Username,
+                    Password = UserNameIPasswordTextBox.Password,
+                    EMail = EmailTextBox.Text,
+                    Spol = Spol.Muski,
+                    JMBG1 = JMBGTextBox.Text,
+                    DatumRodjenja=time
+                };
+                this.Frame.Navigate(typeof(Registracija2), k);
             }
             else if(zenskiButton.IsChecked == true)
             {
-                obj.Spol = Spol.Muski;
-            }
-
-            this.Frame.Navigate(typeof(Registracija2));
-        }
-
-        public static void ucitajKorisnika(string username, string password)
-        {
-            IMobileServiceTable<Korisnik> tabelaKorisnik = App.MobileService.GetTable<Korisnik>();
-            var polja = from a in tabelaKorisnik where a.Username == username select a;
-            var lista = polja.ToListAsync();
+                var date = DatumRodjenja.Date;
+                DateTime time = date.Value.DateTime;
+                k = new Korisnik
+                {
+                    Ime = ImeTextBox.Text,
+                    Prezime = PrezimeTextBox.Text,
+                    Username = UserNameIPasswordTextBox.Username,
+                    Password = UserNameIPasswordTextBox.Password,
+                    EMail = EmailTextBox.Text,
+                    Spol = Spol.Zenski,
+                    JMBG1 = JMBGTextBox.Text,
+                    DatumRodjenja = time
+                };
+                this.Frame.Navigate(typeof(Registracija2), k);
+            }           
         }
     }
 }

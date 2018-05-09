@@ -42,9 +42,21 @@ namespace DiabetesTracker
             {
                 Ime = korisnik.Ime,
                 Prezime = korisnik.Prezime,
-                Password = korisnik.Password,
                 Username = korisnik.Username,
-                EMail = korisnik.EMail
+                Password = korisnik.Password,
+                EMail = korisnik.EMail,
+                Spol = korisnik.Spol,
+                JMBG1 = korisnik.JMBG1,
+                DatumRodjenja = korisnik.DatumRodjenja,
+                TipDijabetesa = korisnik.TipDijabetesa,
+                Visina = korisnik.Visina,
+                Tezina = korisnik.Tezina,
+                FizickaAktivnost = korisnik.FizickaAktivnost,
+                VrijednostHiperglikemije = korisnik.VrijednostHiperglikemije,
+                VrijednostHipoglikemije = korisnik.VrijednostHipoglikemije,
+                CiljaniNivoGlukoze = korisnik.CiljaniNivoGlukoze,
+                GornjaGranicaGlukoze=korisnik.GornjaGranicaGlukoze,
+                DonjaGranicaGlukoze=korisnik.DonjaGranicaGlukoze,
             };
             IMobileServiceTable<Korisnik> tabelaKorisnika = App.MobileService.GetTable<Korisnik>();
             var polja = from a in tabelaKorisnika where a.Username == korisnik.Username select a;
@@ -52,5 +64,30 @@ namespace DiabetesTracker
             if (lista.Count != 0) throw new Exception("Dati username nije slobodan");
             await tabelaKorisnika.InsertAsync(korisnik1);
         }
+
+        /*public static async Task<Korisnik> UcitajKorisnikaID(string id)
+        {
+            IMobileServiceTable<Korisnik> tabelaKorisnika = App.MobileService.GetTable<Korisnik>();
+            var polja = from x in tabelaKorisnika
+                        where x.Id == id
+                        select x;
+            var lista = await polja.ToListAsync();
+            if (lista.Count != 1)
+                throw new Exception("Ne postoji korisnik sa datim id-em");
+            var k = lista[0];
+
+            Korisnik korisnik = null;
+
+            korisnik = new Korisnik
+            {
+                Id = k.Id,
+                EMail = k.EMail,
+                Ime = k.Ime,
+                Prezime = k.Prezime,
+                Password = k.Password,
+                Username = k.Username
+            };
+            return korisnik;
+        }*/
     }
 }

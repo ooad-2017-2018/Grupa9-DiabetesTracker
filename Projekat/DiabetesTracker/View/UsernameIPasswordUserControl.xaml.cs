@@ -32,8 +32,8 @@ namespace DiabetesTracker
 
         public string Password
         {
-            get { return PasswordTextBox.Text; }
-            set { PasswordTextBox.Text = value; }
+            get { return PasswordTextBox.Password.ToString(); }
+            set { PasswordTextBox.Password = value; }
         }
     }
 }
