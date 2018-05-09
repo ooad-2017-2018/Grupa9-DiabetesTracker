@@ -97,6 +97,10 @@
     <RootType FullName="DiabetesTracker.UsernameIPasswordUserControl">
       <RootProperty Name="Height" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="Margin" />
+      <RootProperty Name="BorderBrush" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
       <RootProperty Name="Name" />
       <RootProperty Name="PlaceholderText" />
@@ -136,10 +140,6 @@
     <RootType FullName="DiabetesTracker.Terapija" />
     <RootType FullName="Windows.UI.Xaml.Controls.UserControl">
       <RootProperty Name="Content" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
-      <RootProperty Name="Margin" />
-      <RootProperty Name="BorderBrush" />
     </RootType>
   </Roots.RootTypes>
 </Roots>

@@ -49,6 +49,9 @@ namespace DiabetesTracker.Model
             {
                 if (value > 0)
                     tezina = value;
+                else if (Convert.ToString(value).Length == 0)
+                    throw new Exception("Polje Težina mora biti popunjeno");
+
                 else throw new Exception("Neispravna težina");
             }
         }

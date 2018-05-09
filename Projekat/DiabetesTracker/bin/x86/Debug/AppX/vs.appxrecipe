@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\zerin\Desktop\Zerina\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-09T16:15:55.303</Modified>
+      <Modified>2018-05-09T19:08:10.718</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\zerin\Desktop\Zerina\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\DiabetesTracker.exe">
       <PackagePath>entrypoint\DiabetesTracker.exe</PackagePath>
-      <Modified>2018-05-09T16:15:54.582</Modified>
+      <Modified>2018-05-09T19:08:10.001</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\zerin\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -563,7 +563,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\zerin\Desktop\Zerina\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\DiabetesTracker.xr.xml">
       <PackagePath>DiabetesTracker.xr.xml</PackagePath>
-      <Modified>2018-05-09T16:09:57.110</Modified>
+      <Modified>2018-05-09T18:25:26.608</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.16299.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -572,11 +572,11 @@
     <AppxPackagedFile Include="C:\Users\zerin\Desktop\Zerina\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-09T16:09:58.734</Modified>
+      <Modified>2018-05-09T18:25:28.262</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\zerin\Desktop\Zerina\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\Core\DiabetesTracker.exe">
       <PackagePath>DiabetesTracker.exe</PackagePath>
-      <Modified>2018-05-09T16:15:55.293</Modified>
+      <Modified>2018-05-09T19:08:10.712</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

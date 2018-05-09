@@ -15,6 +15,7 @@ namespace DiabetesTracker.Model
         String prezime;
         String username;
         String password;
+        String potvrdaPassworda;
         String eMail;
         Spol spol;
         String JMBG;
@@ -148,6 +149,16 @@ namespace DiabetesTracker.Model
             }
         }
 
+        public string PotvrdaPassworda {
+            get => potvrdaPassworda;
+            set
+            {
+                if(value != Password)
+                    throw new Exception("Potvrda passworda se ne poklapa sa passwordom");
+                potvrdaPassworda = value;
+            }
+        }
+
 
 
 
@@ -179,6 +190,8 @@ namespace DiabetesTracker.Model
             get { return !this.HasErrors; }
 
         }
+
+       
 
         public void AddError(string propertyName, string error)
         {

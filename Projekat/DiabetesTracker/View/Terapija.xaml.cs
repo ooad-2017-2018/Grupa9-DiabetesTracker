@@ -51,14 +51,11 @@ namespace DiabetesTracker
 
         private async void Dalje1_Click_1(object sender, RoutedEventArgs e)
         {
-            //try
-            //{
+            try
+            {
                 if (IIRadioButton.IsChecked == true)
                 {
-                Terapija t = new Terapija
-                {
-                    
-                };
+                
                     
                     {
                         string s = TerapijaKontrola.Naziv;
@@ -186,11 +183,12 @@ namespace DiabetesTracker
                     }
                     this.Frame.Navigate(typeof(NivoGlukoze), korisnik);
                 }
-            //}
-            /*catch(Exception izuzetak)
+            }
+            catch(Exception izuzetak)
             {
-                await (new MessageDialog(izuzetak.Message)).ShowAsync();
-            }*/
+                if (izuzetak.Message.Equals("Input string was not in a correct format.")) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
+                else await (new MessageDialog(izuzetak.Message)).ShowAsync();
+            }
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)

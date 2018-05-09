@@ -112,6 +112,7 @@ namespace DiabetesTracker
                         Prezime = PrezimeTextBox.Text,
                         Username = UserNameIPasswordTextBox.Username,
                         Password = UserNameIPasswordTextBox.Password,
+                        PotvrdaPassworda = PotvrdaPasswordaTextBox.Password,
                         EMail = EmailTextBox.Text,
                         Spol = Spol.Muski,
                         DatumRodjenja = d
@@ -167,6 +168,7 @@ namespace DiabetesTracker
                         Prezime = PrezimeTextBox.Text,
                         Username = UserNameIPasswordTextBox.Username,
                         Password = UserNameIPasswordTextBox.Password,
+                        PotvrdaPassworda = PotvrdaPasswordaTextBox.Password,
                         EMail = EmailTextBox.Text,
                         Spol = Spol.Zenski,                        
                         DatumRodjenja = d

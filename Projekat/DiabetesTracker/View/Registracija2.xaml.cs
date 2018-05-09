@@ -75,11 +75,13 @@ namespace DiabetesTracker
                 korisnik.Visina = Convert.ToDouble(VisinaBox.Text);
                 korisnik.Tezina = Convert.ToDouble(TezinaBox.Text);
                 korisnik.FizickaAktivnost = FizickaAktivnostBox.SelectedItem.ToString();
-                this.Frame.Navigate(typeof(Terapija), korisnik);
+                this.Frame.Navigate(typeof(Terapija), korisnik);  
             }
             catch(Exception izuzetak)
             {
-                await(new MessageDialog(izuzetak.Message)).ShowAsync();
+                if (izuzetak.Message.Equals("Object reference not set to an instance of an object.")) await (new MessageDialog("Morate odabrati opciju iz padajućeg menija")).ShowAsync();
+                else if (izuzetak.Message.Equals("Input string was not in a correct format.")) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
+                else await (new MessageDialog(izuzetak.Message)).ShowAsync();
             }
         }
 

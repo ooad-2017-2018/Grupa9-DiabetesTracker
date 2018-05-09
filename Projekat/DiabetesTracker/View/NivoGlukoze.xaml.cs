@@ -66,7 +66,8 @@ namespace DiabetesTracker
             }
             catch(Exception izuzetak)
             {
-                await (new MessageDialog(izuzetak.Message)).ShowAsync();
+                if (izuzetak.Message.Equals("Input string was not in a correct format.")) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
+                else await (new MessageDialog(izuzetak.Message)).ShowAsync();
             }
         }
     }
