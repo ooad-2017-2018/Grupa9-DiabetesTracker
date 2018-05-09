@@ -41,26 +41,65 @@ namespace DiabetesTracker.Model
                     string datum = DatumRodjenja.ToString();
                     string maticni = value;
                      string maticni1 = "" + maticni[2] + maticni[3]+maticni[0]+maticni[1];
-                    for(int i = 4; i < maticni.Length; i++)
+                    for(int i = 4; i < 7; i++)
                     {
                         maticni1 += maticni[i];
                     }
-                    /*if (maticni1[0] == '0')
-                    {
-                        string maticni2 = "";
-                        for(int i = 1; i < 13; i++)
-                        {
-                            maticni2 += maticni1[i];
-                        }
-                        maticni1 = maticni2;
-                    }*/
 
+                    string maticni2 = "";
+
+                    if (maticni1[0] == '0' && (maticni1[1] > '0' && maticni1[1] <= '9'))
+                    {
+                        if(maticni1[2] == '0' && (maticni1[3] > '0' && maticni1[3] <= '9'))
+                        {
+                            maticni2 = "" + maticni1[1];
+                            for (int i = 3; i < 7; i++)
+                            {
+                                maticni2 += maticni1[i];
+                            }
+                            
+                        }
+                        else if((maticni1[2] > '0' && maticni1[2] <= '9') && (maticni1[3] > '0' && maticni1[3] <= '9'))
+                        {
+                            maticni2 = "" + maticni1[1];
+                            for (int i = 2; i < 7; i++)
+                            {
+                                maticni2 += maticni1[i];
+                            }
+                            
+                        }
+
+                    }
+                    else if((maticni1[0] > '0' && maticni1[0] <= '9') && (maticni1[1] > '0' && maticni1[1] <= '9'))
+                    {
+                        if (maticni1[2] == '0' && (maticni1[3] > '0' && maticni1[3] <= '9'))
+                        {
+                            maticni2 = "" + maticni1[0] + maticni1[1];
+                            for (int i = 3; i < 7; i++)
+                            {
+                                maticni2 += maticni1[i];
+                            }
+
+                        }
+                        else if ((maticni1[2] > '0' && maticni1[2] <= '9') && (maticni1[3] > '0' && maticni1[3] <= '9'))
+                        {
+                            maticni2 = "" + maticni1[0] + maticni1[1];
+                            for (int i = 2; i < 7; i++)
+                            {
+                                maticni2 += maticni1[i];
+                            }
+
+                        }
+
+                    }
+
+                    maticni1 = maticni2;
 
                     int b = 0;
-                    for (int i = 0; i < 7; i++)
+                    for (int i = 0; i < maticni1.Length; i++)
                     {
                         if (datum[i + b] == '/') b++;
-                        if (i == 4) b++;
+                        if ((maticni1.Length == 7 &&  i == 4) || (maticni1.Length == 5 && i == 2) || (maticni1.Length == 6 && i == 3)) b++;
                         if (datum[i + b] != maticni1[i])
                         {
                             throw new Exception("Neispravan JMBG");

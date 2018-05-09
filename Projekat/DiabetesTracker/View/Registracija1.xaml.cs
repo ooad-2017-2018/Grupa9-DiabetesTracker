@@ -62,33 +62,50 @@ namespace DiabetesTracker
 
             var date = this.DatumRodjenja.Date.ToString();
 
-            try
-            {
+            //try
+            //{
 
                 Korisnik k;
                 if (muskiButton.IsChecked == true)
                 {
                     string a = "";
-                    if (date[1] == '/')
-                    {
-                        a += "0" + date[0];
-                    }
-                    else a += "" + date[0] + date[1];
+                if (date[1] == '/')
+                {
+                    a += date[0]; //0
+                }
+                else
+                {
+                    a += date[0] + date[1];
+                    int pom = Convert.ToInt32(a);
+                    pom = pom - 87;
+                    a = Convert.ToString(pom);
+                }
 
                     string b = "";
-                    if (date[3] == '/')
-                    {
-                        b += "0" + date[2];
-                    }
-                    else if (date[4] == '/' && date[2] == '/')
-                    {
-                        b += "0" + date[3];
-                    }
-                    else if (date[4] == '/')
-                    {
-                        b += date[2] + date[3];
-                    }
-                    else b = "" + date[3] + date[4];
+                if (date[3] == '/')
+                {
+                    b += date[2]; //0
+                }
+                else if (date[4] == '/' && date[2] == '/')
+                {
+                    b += date[3]; //0
+                }
+                else if (date[4] == '/')
+                {
+                    b += date[2] + date[3];
+                    int pom = Convert.ToInt32(b);
+                    pom = pom - 87;
+                    b = Convert.ToString(pom);
+
+
+                }
+                else
+                {
+                    b += date[3] + date[4];
+                    int pom = Convert.ToInt32(b);
+                    pom = pom - 87;
+                    b = Convert.ToString(pom);
+                }
 
                     string c = "";
                     int br = 0;
@@ -122,45 +139,62 @@ namespace DiabetesTracker
                 }
                 else if (zenskiButton.IsChecked == true)
                 {
-                    
-                    string a = "";
-                    if (date[1] == '/')
-                    {
-                        a += "0" + date[0];
-                    }
-                    else a += "" + date[0] + date[1];
 
-                    string b = "";
-                    if (date[3]=='/')
-                    {
-                        b += "0" + date[2];
-                    }
-                    else if (date[4]=='/' && date[2]=='/')
-                    {
-                        b += "0" + date[3];
-                    }
-                    else if (date[4] == '/')
-                    {
-                        b += date[2] + date[3];
-                    }
-                    else b = "" + date[3] + date[4];
+                string a = "";
+                if (date[1] == '/')
+                {
+                    a += date[0]; //0
+                }
+                else
+                {
+                    a += date[0] + date[1];
+                    int pom = Convert.ToInt32(a);
+                    pom = pom - 87;
+                    a = Convert.ToString(pom);
+                }
 
-                    string c="";
-                    int br = 0;
-                    for(int i = 0; i < date.Length; i++)
+                string b = "";
+                if (date[3] == '/')
+                {
+                    b += date[2]; //0
+                }
+                else if (date[4] == '/' && date[2] == '/')
+                {
+                    b += date[3]; //0
+                }
+                else if (date[4] == '/')
+                {
+                    b += date[2] + date[3];
+                    int pom = Convert.ToInt32(b);
+                    pom = pom - 87;
+                    b = Convert.ToString(pom);
+
+
+                }
+                else
+                {
+                    b += date[3] + date[4];
+                    int pom = Convert.ToInt32(b);
+                    pom = pom - 87;
+                    b = Convert.ToString(pom);
+                }
+
+                string c = "";
+                int br = 0;
+                for (int i = 0; i < date.Length; i++)
+                {
+                    if (date[i] == '/') br++;
+                    if (br == 2)
                     {
-                        if (date[i] == '/') br++;
-                        if (br == 2)
+                        for (int j = i + 1; j < i + 5; j++)
                         {
-                            for(int j = i+1; j < i + 5; j++)
-                            {
-                                c += date[j];
-                            }
-                            break;
+                            c += date[j];
                         }
+                        break;
                     }
+                }
 
-                    DateTime d = new DateTime(Convert.ToInt32(c), Convert.ToInt32(a), Convert.ToInt32(b));
+                DateTime d = new DateTime(Convert.ToInt32(c), Convert.ToInt32(a), Convert.ToInt32(b));
                     
                     k = new Korisnik
                     {
@@ -176,11 +210,11 @@ namespace DiabetesTracker
                     k.JMBG1 = JMBGTextBox.Text;
                     this.Frame.Navigate(typeof(Registracija2), k);
                 }
-           }
-            catch(Exception izuzetak)
+           //}
+            /*catch(Exception izuzetak)
             {
                 await(new MessageDialog(izuzetak.Message)).ShowAsync();
-            }
+            }*/
         }
     }
 }
