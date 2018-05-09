@@ -21,14 +21,133 @@ namespace DiabetesTracker.Model
         DateTime datumRodjenja;
 
         public string Id { get => id; set => id = value; }
-        public virtual string Ime { get => ime; set => ime = value; }
-        public virtual string Prezime { get => prezime; set => prezime = value; }
-        public virtual string Username { get => username; set => username = value; }
-        public virtual string Password { get => password; set => password = value; }
-        public virtual string EMail { get => eMail; set => eMail = value; }
         public virtual Spol Spol { get => spol; set => spol = value; }
-        public virtual string JMBG1 { get => JMBG; set => JMBG = value; }
-        public virtual DateTime DatumRodjenja { get => datumRodjenja; set => datumRodjenja = value; }
+
+
+        public virtual string JMBG1
+        {
+            get => JMBG;
+
+            set
+            {
+                if (value.Length != 13)
+                {
+                    throw new Exception("Matično broj mora imati 13 karaktera");
+                }
+
+                else if (value.Length == 13)
+                {
+                    string datum = DatumRodjenja.ToString();
+                    string maticni = value;
+                     string maticni1 = "" + maticni[2] + maticni[3]+maticni[0]+maticni[1];
+                    for(int i = 4; i < maticni.Length; i++)
+                    {
+                        maticni1 += maticni[i];
+                    }
+                    /*if (maticni1[0] == '0')
+                    {
+                        string maticni2 = "";
+                        for(int i = 1; i < 13; i++)
+                        {
+                            maticni2 += maticni1[i];
+                        }
+                        maticni1 = maticni2;
+                    }*/
+
+
+                    int b = 0;
+                    for (int i = 0; i < 7; i++)
+                    {
+                        if (datum[i + b] == '/') b++;
+                        if (i == 4) b++;
+                        if (datum[i + b] != maticni1[i])
+                        {
+                            throw new Exception("Neispravan JMBG");
+                        }
+                    }
+
+                }
+                JMBG = value;
+            }
+        }
+
+
+        public string Ime
+        {
+            get => ime;
+            set
+            {
+                if (value.Length == 0)
+                    throw new Exception("Ime ne smije biti prazno");
+                if (value.Any(c => !char.IsLetter(c)))
+                    throw new Exception("Ime ne smije sadržavati ništa osim slova");
+                if (value.Substring(1, value.Length - 1).Any(c => char.IsUpper(c)))
+                    throw new Exception("Samo prvo slovo imena može biti veliko");
+                if (!char.IsUpper(value[0]))
+                    throw new Exception("Prvo slovo imena mora biti veliko");
+                ime = value;
+            }
+        }
+        public string Prezime
+        {
+            get => prezime;
+            set
+            {
+                if (value.Length == 0)
+                    throw new Exception("Prezime ne smije biti prazno");
+                if (value.Any(c => !char.IsLetter(c)))
+                    throw new Exception("Prezime ne smije sadržavati ništa osim slova");
+                if (value.Substring(1, value.Length - 1).Any(c => char.IsUpper(c)))
+                    throw new Exception("Samo prvo slovo prezimena može biti veliko");
+                if (!char.IsUpper(value[0]))
+                    throw new Exception("Prvo slovo prezimena mora biti veliko");
+                prezime = value;
+            }
+        }
+        public string Username
+        {
+            get => username;
+            set
+            {
+                if (value.Length == 0)
+                    throw new Exception("Username ne smije biti prazno");
+                username = value;
+            }
+        }
+        public string Password
+        {
+            get => password;
+            set
+            {
+                if (value.Length == 0)
+                    throw new Exception("Password ne smije biti prazan");
+                password = value;
+            }
+        }
+        public string EMail
+        {
+            get => eMail;
+            set
+            {
+                if (string.IsNullOrWhiteSpace(value) || !System.Text.RegularExpressions.Regex.IsMatch(value, @"^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}" +
+                     @"\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\" +
+                     @".)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"))
+                    throw new Exception("Email nevalidan");
+                eMail = value;
+            }
+        }
+
+        public DateTime DatumRodjenja
+        {
+            get => datumRodjenja;
+            set
+            {
+                if (value < DateTime.Now)
+                    datumRodjenja = value;
+                else throw new Exception("Datum rođenja nevalidan");
+            }
+        }
+
 
 
 

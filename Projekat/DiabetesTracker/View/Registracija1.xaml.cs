@@ -51,7 +51,7 @@ namespace DiabetesTracker
             appView.Title = "Registracija";
         }
 
-        private void dalje_Click(object sender, RoutedEventArgs e)
+        private async void dalje_Click(object sender, RoutedEventArgs e)
         {
             /*Korisnik obj = new Korisnik();
             obj.Ime = ImeTextBox.Text;
@@ -59,41 +59,126 @@ namespace DiabetesTracker
             
             obj.EMail = EmailTextBox.Text;
             */
-            Korisnik k;
-            if (muskiButton.IsChecked == true)
+
+            var date = this.DatumRodjenja.Date.ToString();
+
+            try
             {
-                var date = DatumRodjenja.Date;
-                DateTime time = date.Value.DateTime;
-                k = new Korisnik
+
+                Korisnik k;
+                if (muskiButton.IsChecked == true)
                 {
-                    Ime = ImeTextBox.Text,
-                    Prezime = PrezimeTextBox.Text,
-                    Username = UserNameIPasswordTextBox.Username,
-                    Password = UserNameIPasswordTextBox.Password,
-                    EMail = EmailTextBox.Text,
-                    Spol = Spol.Muski,
-                    JMBG1 = JMBGTextBox.Text,
-                    DatumRodjenja=time
-                };
-                this.Frame.Navigate(typeof(Registracija2), k);
+                    string a = "";
+                    if (date[1] == '/')
+                    {
+                        a += "0" + date[0];
+                    }
+                    else a += "" + date[0] + date[1];
+
+                    string b = "";
+                    if (date[3] == '/')
+                    {
+                        b += "0" + date[2];
+                    }
+                    else if (date[4] == '/' && date[2] == '/')
+                    {
+                        b += "0" + date[3];
+                    }
+                    else if (date[4] == '/')
+                    {
+                        b += date[2] + date[3];
+                    }
+                    else b = "" + date[3] + date[4];
+
+                    string c = "";
+                    int br = 0;
+                    for (int i = 0; i < date.Length; i++)
+                    {
+                        if (date[i] == '/') br++;
+                        if (br == 2)
+                        {
+                            for (int j = i + 1; j < i + 5; j++)
+                            {
+                                c += date[j];
+                            }
+                            break;
+                        }
+                    }
+
+                    DateTime d = new DateTime(Convert.ToInt32(c), Convert.ToInt32(a), Convert.ToInt32(b));
+                    k = new Korisnik
+                    {
+                        Ime = ImeTextBox.Text,
+                        Prezime = PrezimeTextBox.Text,
+                        Username = UserNameIPasswordTextBox.Username,
+                        Password = UserNameIPasswordTextBox.Password,
+                        EMail = EmailTextBox.Text,
+                        Spol = Spol.Muski,
+                        DatumRodjenja = d
+                    };
+                    k.JMBG1 = JMBGTextBox.Text;
+                    this.Frame.Navigate(typeof(Registracija2), k);
+                }
+                else if (zenskiButton.IsChecked == true)
+                {
+                    
+                    string a = "";
+                    if (date[1] == '/')
+                    {
+                        a += "0" + date[0];
+                    }
+                    else a += "" + date[0] + date[1];
+
+                    string b = "";
+                    if (date[3]=='/')
+                    {
+                        b += "0" + date[2];
+                    }
+                    else if (date[4]=='/' && date[2]=='/')
+                    {
+                        b += "0" + date[3];
+                    }
+                    else if (date[4] == '/')
+                    {
+                        b += date[2] + date[3];
+                    }
+                    else b = "" + date[3] + date[4];
+
+                    string c="";
+                    int br = 0;
+                    for(int i = 0; i < date.Length; i++)
+                    {
+                        if (date[i] == '/') br++;
+                        if (br == 2)
+                        {
+                            for(int j = i+1; j < i + 5; j++)
+                            {
+                                c += date[j];
+                            }
+                            break;
+                        }
+                    }
+
+                    DateTime d = new DateTime(Convert.ToInt32(c), Convert.ToInt32(a), Convert.ToInt32(b));
+                    
+                    k = new Korisnik
+                    {
+                        Ime = ImeTextBox.Text,
+                        Prezime = PrezimeTextBox.Text,
+                        Username = UserNameIPasswordTextBox.Username,
+                        Password = UserNameIPasswordTextBox.Password,
+                        EMail = EmailTextBox.Text,
+                        Spol = Spol.Zenski,                        
+                        DatumRodjenja = d
+                    };
+                    k.JMBG1 = JMBGTextBox.Text;
+                    this.Frame.Navigate(typeof(Registracija2), k);
+                }
+           }
+            catch(Exception izuzetak)
+            {
+                await(new MessageDialog(izuzetak.Message)).ShowAsync();
             }
-            else if(zenskiButton.IsChecked == true)
-            {
-                var date = DatumRodjenja.Date;
-                DateTime time = date.Value.DateTime;
-                k = new Korisnik
-                {
-                    Ime = ImeTextBox.Text,
-                    Prezime = PrezimeTextBox.Text,
-                    Username = UserNameIPasswordTextBox.Username,
-                    Password = UserNameIPasswordTextBox.Password,
-                    EMail = EmailTextBox.Text,
-                    Spol = Spol.Zenski,
-                    JMBG1 = JMBGTextBox.Text,
-                    DatumRodjenja = time
-                };
-                this.Frame.Navigate(typeof(Registracija2), k);
-            }           
         }
     }
 }

@@ -23,5 +23,11 @@ namespace DiabetesTracker
         {
             this.InitializeComponent();
         }
+
+        public string Naziv
+        {
+            get { return Lijekovi.Text; }
+            set { Lijekovi.Text = value; }
+        }
     }
 }

@@ -31,7 +31,19 @@ namespace DiabetesTracker
                 Ime = x.Ime,
                 Prezime = x.Prezime,
                 Password = x.Password,
-                Username = x.Username
+                Username = x.Username,
+                Spol = x.Spol,
+                JMBG1 = x.JMBG1,
+                DatumRodjenja = x.DatumRodjenja,
+                TipDijabetesa = x.TipDijabetesa,
+                Visina = x.Visina,
+                Tezina = x.Tezina,
+                FizickaAktivnost = x.FizickaAktivnost,
+                VrijednostHiperglikemije = x.VrijednostHiperglikemije,
+                VrijednostHipoglikemije = x.VrijednostHipoglikemije,
+                CiljaniNivoGlukoze = x.CiljaniNivoGlukoze,
+                GornjaGranicaGlukoze = x.GornjaGranicaGlukoze,
+                DonjaGranicaGlukoze = x.DonjaGranicaGlukoze
             };
             return korisnik;
         }
@@ -56,7 +68,7 @@ namespace DiabetesTracker
                 VrijednostHipoglikemije = korisnik.VrijednostHipoglikemije,
                 CiljaniNivoGlukoze = korisnik.CiljaniNivoGlukoze,
                 GornjaGranicaGlukoze=korisnik.GornjaGranicaGlukoze,
-                DonjaGranicaGlukoze=korisnik.DonjaGranicaGlukoze,
+                DonjaGranicaGlukoze=korisnik.DonjaGranicaGlukoze
             };
             IMobileServiceTable<Korisnik> tabelaKorisnika = App.MobileService.GetTable<Korisnik>();
             var polja = from a in tabelaKorisnika where a.Username == korisnik.Username select a;

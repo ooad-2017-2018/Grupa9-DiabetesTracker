@@ -14,7 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI;
 using Windows.UI.ViewManagement;
-
+using DiabetesTracker.Model;
+using Windows.UI.Popups;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace DiabetesTracker
@@ -24,6 +25,8 @@ namespace DiabetesTracker
     /// </summary>
     public sealed partial class Terapija : Page
     {
+
+        Korisnik korisnik;
         public Terapija()
         {
             this.InitializeComponent();
@@ -46,9 +49,148 @@ namespace DiabetesTracker
             appView.Title = "Registracija";
         }
 
-        private void Dalje1_Click_1(object sender, RoutedEventArgs e)
+        private async void Dalje1_Click_1(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(NivoGlukoze));
+            //try
+            //{
+                if (IIRadioButton.IsChecked == true)
+                {
+                Terapija t = new Terapija
+                {
+                    
+                };
+                    
+                    {
+                        string s = TerapijaKontrola.Naziv;
+                        List<String> s1 = new List<String>();
+                        string s2 = "";
+                        for (int i = 0; i < s.Length; i++)
+                        {
+                            while (s[i] != ',')
+                            {
+                                s2 += s[i];
+                            }
+
+                            if (s[i] == ',')
+                            {
+                                s1.Add(s2);
+                                s2 = "";
+                            }
+                        }
+                        korisnik.Terapija.Lijekovi = s1;
+                    }
+                    {
+                        string s = DozaLijeka.Text;
+                        List<Double> s1 = new List<Double>();
+                        string s2 = "";
+                        for (int i = 0; i < s.Length; i++)
+                        {
+                            while (s[i] != ',')
+                            {
+                                s2 += s[i];
+                            }
+
+                            if (s[i] == ',')
+                            {
+                                s1.Add(Convert.ToDouble(s2));
+                                s2 = "";
+                            }
+                        }
+                        korisnik.Terapija.DozaLijeka = s1;
+                    }
+                    this.Frame.Navigate(typeof(NivoGlukoze), korisnik);
+                }
+                else if (NITRadioButton.IsChecked == true)
+                {
+                    korisnik.Terapija.Tip = TipTerapije.Neinzulinska;
+                    {
+                        string s = TerapijaKontrola.Naziv;
+                        List<String> s1 = new List<String>();
+                        string s2 = "";
+                        for (int i = 0; i < s.Length; i++)
+                        {
+                            while (s[i] != ',')
+                            {
+                                s2 += s[i];
+                            }
+
+                            if (s[i] == ',')
+                            {
+                                s1.Add(s2);
+                                s2 = "";
+                            }
+                        }
+                        korisnik.Terapija.Lijekovi = s1;
+                    }
+                    {
+                        string s = DozaLijeka.Text;
+                        List<Double> s1 = new List<Double>();
+                        string s2 = "";
+                        for (int i = 0; i < s.Length; i++)
+                        {
+                            while (s[i] != ',')
+                            {
+                                s2 += s[i];
+                            }
+
+                            if (s[i] == ',')
+                            {
+                                s1.Add(Convert.ToDouble(s2));
+                                s2 = "";
+                            }
+                        }
+                        korisnik.Terapija.DozaLijeka = s1;
+                    }
+                    this.Frame.Navigate(typeof(NivoGlukoze), korisnik);
+                }
+                else if (IPRadioButton.IsChecked == true)
+                {
+                    korisnik.Terapija.Tip = TipTerapije.InzulinskaPumpa;
+                    {
+                        string s = TerapijaKontrola.Naziv;
+                        List<String> s1 = new List<String>();
+                        string s2 = "";
+                        for (int i = 0; i < s.Length; i++)
+                        {
+                            while (s[i] != ',')
+                            {
+                                s2 += s[i];
+                            }
+
+                            if (s[i] == ',')
+                            {
+                                s1.Add(s2);
+                                s2 = "";
+                            }
+                        }
+                        korisnik.Terapija.Lijekovi = s1;
+                    }
+                    {
+                        string s = DozaLijeka.Text;
+                        List<Double> s1 = new List<Double>();
+                        string s2 = "";
+                        for (int i = 0; i < s.Length; i++)
+                        {
+                            while (s[i] != ',')
+                            {
+                                s2 += s[i];
+                            }
+
+                            if (s[i] == ',')
+                            {
+                                s1.Add(Convert.ToDouble(s2));
+                                s2 = "";
+                            }
+                        }
+                        korisnik.Terapija.DozaLijeka = s1;
+                    }
+                    this.Frame.Navigate(typeof(NivoGlukoze), korisnik);
+                }
+            //}
+            /*catch(Exception izuzetak)
+            {
+                await (new MessageDialog(izuzetak.Message)).ShowAsync();
+            }*/
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
@@ -59,6 +201,12 @@ namespace DiabetesTracker
         private void TerapijaKontrola_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            korisnik = e.Parameter as Korisnik;
         }
     }
 }

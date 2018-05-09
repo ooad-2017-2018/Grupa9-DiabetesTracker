@@ -14,7 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI;
 using Windows.UI.ViewManagement;
-
+using DiabetesTracker.Model;
+using Windows.UI.Popups;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace DiabetesTracker
@@ -27,9 +28,12 @@ namespace DiabetesTracker
         List<string> tipDijabetesa = new List<string>();
         List<string> fizickaAktivnost = new List<string>();
 
+        
+
+        Korisnik korisnik;
         public Registracija2()
         {
-            this.InitializeComponent();
+
 
             tipDijabetesa.Add("Tip 1");
             tipDijabetesa.Add("Tip 2");
@@ -39,6 +43,10 @@ namespace DiabetesTracker
             fizickaAktivnost.Add("1-3 dana sedmično");
             fizickaAktivnost.Add("3-5 dana sedmično");
             fizickaAktivnost.Add("6-7 dana sedmično");
+
+            this.InitializeComponent();
+
+
 
             setTitleBarBackground();
         }
@@ -59,9 +67,26 @@ namespace DiabetesTracker
             appView.Title = "Registracija";
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private async void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(Terapija));
+            try
+            {
+                korisnik.TipDijabetesa = TipDijabetesaBox.SelectedItem.ToString();
+                korisnik.Visina = Convert.ToDouble(VisinaBox.Text);
+                korisnik.Tezina = Convert.ToDouble(TezinaBox.Text);
+                korisnik.FizickaAktivnost = FizickaAktivnostBox.SelectedItem.ToString();
+                this.Frame.Navigate(typeof(Terapija), korisnik);
+            }
+            catch(Exception izuzetak)
+            {
+                await(new MessageDialog(izuzetak.Message)).ShowAsync();
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            korisnik = e.Parameter as Korisnik;
         }
     }
 }

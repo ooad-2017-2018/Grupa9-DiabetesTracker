@@ -14,7 +14,7 @@ namespace DiabetesTracker.Model
 
         public List<string> Lijekovi { get => lijekovi; set => lijekovi = value; }
         public List<double> DozaLijeka { get => dozaLijeka; set => dozaLijeka = value; }
-        internal TipTerapije Tip { get => tip; set => tip = value; }
+        public TipTerapije Tip { get => tip; set => tip = value; }
 
     }
 }

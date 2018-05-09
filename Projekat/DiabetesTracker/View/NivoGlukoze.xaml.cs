@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.UI;
 using Windows.UI.ViewManagement;
+using DiabetesTracker.Model;
+using Windows.UI.Popups;
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace DiabetesTracker
@@ -23,6 +25,7 @@ namespace DiabetesTracker
     /// </summary>
     public sealed partial class NivoGlukoze : Page
     {
+        Korisnik korisnik;
         public NivoGlukoze()
         {
             this.InitializeComponent();
@@ -43,6 +46,28 @@ namespace DiabetesTracker
             //promjena naziva prozora (TitleBar)
             ApplicationView appView = ApplicationView.GetForCurrentView();
             appView.Title = "Registracija";
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            korisnik = e.Parameter as Korisnik;
+        }
+
+        private async void Dugme_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                korisnik.CiljaniNivoGlukoze = Convert.ToDouble(CiljaniBox.Text);
+                korisnik.VrijednostHipoglikemije = Convert.ToDouble(HipoBox.Text);
+                korisnik.VrijednostHiperglikemije = Convert.ToDouble(HiperBox.Text);
+                korisnik.DonjaGranicaGlukoze = Convert.ToDouble(DonjaBox.Text);
+                korisnik.GornjaGranicaGlukoze = Convert.ToDouble(GornjaBox.Text);
+            }
+            catch(Exception izuzetak)
+            {
+                await (new MessageDialog(izuzetak.Message)).ShowAsync();
+            }
         }
     }
 }

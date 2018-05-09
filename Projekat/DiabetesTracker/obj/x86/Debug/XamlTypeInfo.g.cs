@@ -259,6 +259,7 @@ namespace DiabetesTracker.DiabetesTracker_XamlTypeInfo
             case 8:   //  DiabetesTracker.TerapijaKontrola
                 userType = new global::DiabetesTracker.DiabetesTracker_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.UserControl"));
                 userType.Activator = Activate_8_TerapijaKontrola;
+                userType.AddMemberName("Naziv");
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -294,6 +295,16 @@ namespace DiabetesTracker.DiabetesTracker_XamlTypeInfo
             var that = (global::DiabetesTracker.UsernameIPasswordUserControl)instance;
             that.Password = (global::System.String)Value;
         }
+        private object get_2_TerapijaKontrola_Naziv(object instance)
+        {
+            var that = (global::DiabetesTracker.TerapijaKontrola)instance;
+            return that.Naziv;
+        }
+        private void set_2_TerapijaKontrola_Naziv(object instance, object Value)
+        {
+            var that = (global::DiabetesTracker.TerapijaKontrola)instance;
+            that.Naziv = (global::System.String)Value;
+        }
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
@@ -313,6 +324,12 @@ namespace DiabetesTracker.DiabetesTracker_XamlTypeInfo
                 xamlMember = new global::DiabetesTracker.DiabetesTracker_XamlTypeInfo.XamlMember(this, "Password", "String");
                 xamlMember.Getter = get_1_UsernameIPasswordUserControl_Password;
                 xamlMember.Setter = set_1_UsernameIPasswordUserControl_Password;
+                break;
+            case "DiabetesTracker.TerapijaKontrola.Naziv":
+                userType = (global::DiabetesTracker.DiabetesTracker_XamlTypeInfo.XamlUserType)GetXamlTypeByName("DiabetesTracker.TerapijaKontrola");
+                xamlMember = new global::DiabetesTracker.DiabetesTracker_XamlTypeInfo.XamlMember(this, "Naziv", "String");
+                xamlMember.Getter = get_2_TerapijaKontrola_Naziv;
+                xamlMember.Setter = set_2_TerapijaKontrola_Naziv;
                 break;
             }
             return xamlMember;

@@ -18,7 +18,7 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Ostali lijekovi:" Grid.Row="0" FontWeight="Bold" Margin="4,0,4,0"></TextBlock>
         <TextBlock Text="Naziv:" Grid.Row="1" Margin="4,0,4,0"></TextBlock>
-        <TextBox Grid.Row="2" BorderBrush="#FF6189C5" Height="30" Margin="4,4,4,0" VerticalAlignment="Top" Width="250" HorizontalAlignment="Left"></TextBox>
+        <TextBox x:ConnectionId='1' Name="Lijekovi" Grid.Row="2" BorderBrush="#FF6189C5" Height="30" Margin="4,4,4,0" VerticalAlignment="Top" Width="250" HorizontalAlignment="Left"></TextBox>
     </Grid>
    
 

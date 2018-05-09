@@ -60,13 +60,13 @@
 
                 <StackPanel x:ConnectionId='4' Name="Drugi" Orientation="Vertical" Grid.ColumnSpan="1" Margin="0, 1, 0, 0" Grid.RowSpan="1" Grid.Column="1" Grid.Row="1">
                     <TextBlock x:ConnectionId='5' Text="Tip terapije:" TextWrapping="Wrap" Margin="4" TextAlignment="Left" VerticalAlignment="Center" FontSize="16" FontWeight="Bold"                                              ></TextBlock>
-                    <RadioButton Content="Neinzulinska terapija" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" BorderBrush="Transparent"/>
-                    <RadioButton Content="Inzulinske injekcije" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" BorderBrush="Transparent"/>
-                    <RadioButton Content="Inzulinska pumpa" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" BorderBrush="Transparent"/>
-                    <local:TerapijaKontrola x:ConnectionId='6'                                  Height="115"/>
+                    <RadioButton x:ConnectionId='6' Name="NITRadioButton" Content="Neinzulinska terapija" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" BorderBrush="Transparent"/>
+                    <RadioButton x:ConnectionId='7' Name="IIRadioButton" Content="Inzulinske injekcije" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" BorderBrush="Transparent"/>
+                    <RadioButton x:ConnectionId='8' Name="IPRadioButton" Content="Inzulinska pumpa" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="4" BorderBrush="Transparent"/>
+                    <local:TerapijaKontrola x:ConnectionId='9' x:Name="TerapijaKontrola"                                  Height="115"/>
                     <TextBlock Text="Doza:" TextWrapping="Wrap"  Margin="4" TextAlignment="Left" VerticalAlignment="Center" FontSize="16"></TextBlock>
-                    <TextBox x:ConnectionId='7' x:Name="DozaLijeka"  BorderBrush="#FF6189C5" Margin="4" Width="250" HorizontalAlignment="Left"></TextBox>
-                    <Button x:ConnectionId='8' x:Name="Dalje1" Content="Dalje" Background="#FF6189C5" Foreground="White"  HorizontalAlignment="Right" Margin="4" Width="70"                       />
+                    <TextBox x:ConnectionId='10' x:Name="DozaLijeka"  BorderBrush="#FF6189C5" Margin="4" Width="250" HorizontalAlignment="Left"></TextBox>
+                    <Button x:ConnectionId='11' x:Name="Dalje1" Content="Dalje" Background="#FF6189C5" Foreground="White"  HorizontalAlignment="Right" Margin="4" Width="70"                       />
                     
 
                 </StackPanel>
