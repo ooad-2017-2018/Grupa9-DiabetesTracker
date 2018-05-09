@@ -180,8 +180,10 @@ namespace DiabetesTracker
             }
             catch(Exception izuzetak)
             {
-                //if (izuzetak.Message.Equals("Input string was not in a correct format.")) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
-                /*else*/ await (new MessageDialog(izuzetak.Message)).ShowAsync();
+
+                if(DozaLijeka.Text.Length == 0) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
+                else if (izuzetak.Message.Equals("Input string was not in a correct format.")) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
+                else await (new MessageDialog(izuzetak.Message)).ShowAsync();
             }
         }
 

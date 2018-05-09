@@ -79,8 +79,9 @@ namespace DiabetesTracker
             }
             catch(Exception izuzetak)
             {
-                if (izuzetak.Message.Equals("Object reference not set to an instance of an object.")) await (new MessageDialog("Morate odabrati opciju iz padajućeg menija")).ShowAsync();
-                else if (izuzetak.Message.Equals("Input string was not in a correct format.")) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
+                if(VisinaBox.Text.Length == 0 || TezinaBox.Text.Length == 0) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
+                else if (izuzetak.Message.Equals("Object reference not set to an instance of an object.")) await (new MessageDialog("Morate odabrati opciju iz padajućeg menija")).ShowAsync();
+                //else if (izuzetak.Message.Equals("Input string was not in a correct format.")) 
                 else await (new MessageDialog(izuzetak.Message)).ShowAsync();
             }
         }

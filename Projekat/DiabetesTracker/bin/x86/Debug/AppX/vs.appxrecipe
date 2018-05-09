@@ -31,13 +31,13 @@
     <AppXManifest Include="C:\Users\cico\Pictures\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2018-05-09T21:26:49.718</Modified>
+      <Modified>2018-05-09T21:36:56.494</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\cico\Pictures\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\DiabetesTracker.exe">
       <PackagePath>entrypoint\DiabetesTracker.exe</PackagePath>
-      <Modified>2018-05-09T21:26:48.953</Modified>
+      <Modified>2018-05-09T21:36:55.342</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cico\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
@@ -576,7 +576,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\cico\Pictures\Grupa9-DiabetesTracker\Projekat\DiabetesTracker\bin\x86\Debug\Core\DiabetesTracker.exe">
       <PackagePath>DiabetesTracker.exe</PackagePath>
-      <Modified>2018-05-09T21:26:49.713</Modified>
+      <Modified>2018-05-09T21:36:56.480</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
