@@ -33,7 +33,7 @@ namespace DiabetesTracker.Model
             {
                 if (value.Length != 13)
                 {
-                    throw new Exception("Matično broj mora imati 13 karaktera");
+                    throw new Exception("Matični broj mora imati 13 karaktera");
                 }
 
                 else if (value.Length == 13)
