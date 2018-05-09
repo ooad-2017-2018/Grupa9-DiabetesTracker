@@ -21,7 +21,7 @@ namespace DiabetesTracker
                 throw new Exception("Korisnik ne postoji");
             var x = lista[0];
             if (x.Password != password && password != "")
-                throw new Exception("Pogresan password");
+                throw new Exception("Pogresan password");            
             Korisnik korisnik = null;
 
             korisnik = new Korisnik
@@ -33,7 +33,7 @@ namespace DiabetesTracker
                 Password = x.Password,
                 Username = x.Username,
                 Spol = x.Spol,
-                JMBG1 = x.JMBG1,
+                JMBG2 = x.JMBG1,
                 DatumRodjenja = x.DatumRodjenja,
                 TipDijabetesa = x.TipDijabetesa,
                 Visina = x.Visina,
@@ -44,12 +44,13 @@ namespace DiabetesTracker
                 CiljaniNivoGlukoze = x.CiljaniNivoGlukoze,
                 GornjaGranicaGlukoze = x.GornjaGranicaGlukoze,
                 DonjaGranicaGlukoze = x.DonjaGranicaGlukoze
-            };
+            };            
+            throw new Exception("Korisnik postoji");
             return korisnik;
         }
 
         public static async Task dodajKorisnika(Korisnik korisnik)
-        {
+        {            
             Korisnik korisnik1 = new Korisnik
             {
                 Ime = korisnik.Ime,
@@ -58,7 +59,7 @@ namespace DiabetesTracker
                 Password = korisnik.Password,
                 EMail = korisnik.EMail,
                 Spol = korisnik.Spol,
-                JMBG1 = korisnik.JMBG1,
+                JMBG2 = korisnik.JMBG1,
                 DatumRodjenja = korisnik.DatumRodjenja,
                 TipDijabetesa = korisnik.TipDijabetesa,
                 Visina = korisnik.Visina,
@@ -67,14 +68,17 @@ namespace DiabetesTracker
                 VrijednostHiperglikemije = korisnik.VrijednostHiperglikemije,
                 VrijednostHipoglikemije = korisnik.VrijednostHipoglikemije,
                 CiljaniNivoGlukoze = korisnik.CiljaniNivoGlukoze,
-                GornjaGranicaGlukoze=korisnik.GornjaGranicaGlukoze,
-                DonjaGranicaGlukoze=korisnik.DonjaGranicaGlukoze
+                GornjaGranicaGlukoze = korisnik.GornjaGranicaGlukoze,
+                DonjaGranicaGlukoze = korisnik.DonjaGranicaGlukoze,
+                Tip = korisnik.Tip,
+                Lijekovi = korisnik.Lijekovi,
+                DozaLijeka=korisnik.DozaLijeka
             };
             IMobileServiceTable<Korisnik> tabelaKorisnika = App.MobileService.GetTable<Korisnik>();
-            var polja = from a in tabelaKorisnika where a.Username == korisnik.Username select a;
+            /*var polja = from a in tabelaKorisnika where a.Username == korisnik.Username select a;
             var lista = await polja.ToListAsync();
-            if (lista.Count != 0) throw new Exception("Dati username nije slobodan");
-            await tabelaKorisnika.InsertAsync(korisnik1);
+            if (lista.Count != 0) throw new Exception("Dati username nije slobodan");*/
+            await tabelaKorisnika.InsertAsync(korisnik);
         }
 
         /*public static async Task<Korisnik> UcitajKorisnikaID(string id)
@@ -101,5 +105,13 @@ namespace DiabetesTracker
             };
             return korisnik;
         }*/
+
+        public static async Task provjeriUsername(String username)
+        {
+            IMobileServiceTable<Korisnik> tabelaKorisnika = App.MobileService.GetTable<Korisnik>();
+            var polja = from a in tabelaKorisnika where a.Username == username select a;
+            var lista = await polja.ToListAsync();
+            if (lista.Count != 0) throw new Exception("Dati username nije slobodan");
+        }
     }
 }

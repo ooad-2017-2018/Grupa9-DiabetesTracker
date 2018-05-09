@@ -55,69 +55,58 @@ namespace DiabetesTracker
             {
                 if (IIRadioButton.IsChecked == true)
                 {
-                
-                    
+                    korisnik.Tip = TipTerapije.InzulinskeInjekcije;
                     {
-                        string s = TerapijaKontrola.Naziv;
-                        List<String> s1 = new List<String>();
-                        string s2 = "";
-                        for (int i = 0; i < s.Length; i++)
-                        {
-                            while (s[i] != ',')
-                            {
-                                s2 += s[i];
-                            }
-
-                            if (s[i] == ',')
-                            {
-                                s1.Add(s2);
-                                s2 = "";
-                            }
-                        }
-                        korisnik.Terapija.Lijekovi = s1;
+                        string s = TerapijaKontrola.Naziv;                        
+                        korisnik.Lijekovi =TerapijaKontrola.Naziv;
+                        korisnik.DozaLijeka = DozaLijeka.Text;
                     }
-                    {
+                    /*{
                         string s = DozaLijeka.Text;
                         List<Double> s1 = new List<Double>();
                         string s2 = "";
                         for (int i = 0; i < s.Length; i++)
                         {
-                            while (s[i] != ',')
+                            while (i < s.Length && s[i] != ',')
                             {
                                 s2 += s[i];
+                                i++;
                             }
 
-                            if (s[i] == ',')
+                            if (i < s.Length && s[i] == ',')
                             {
                                 s1.Add(Convert.ToDouble(s2));
                                 s2 = "";
                             }
                         }
-                        korisnik.Terapija.DozaLijeka = s1;
-                    }
+                        korisnik.DozaLijeka = s1;
+                    }*/
                     this.Frame.Navigate(typeof(NivoGlukoze), korisnik);
                 }
                 else if (NITRadioButton.IsChecked == true)
                 {
-                    korisnik.Terapija.Tip = TipTerapije.Neinzulinska;
-                    {
+                    korisnik.Tip = TipTerapije.Neinzulinska;
+                    korisnik.Lijekovi = TerapijaKontrola.Naziv;
+                    korisnik.DozaLijeka = DozaLijeka.Text;
+                    /*{
                         string s = TerapijaKontrola.Naziv;
                         List<String> s1 = new List<String>();
                         string s2 = "";
                         for (int i = 0; i < s.Length; i++)
                         {
-                            while (s[i] != ',')
+                            while (i < s.Length && s[i] != ',')
                             {
                                 s2 += s[i];
+                                i++;
                             }
 
-                            if (s[i] == ',')
+                            if (i < s.Length && s[i] == ',')
                             {
                                 s1.Add(s2);
                                 s2 = "";
                             }
                         }
-                        korisnik.Terapija.Lijekovi = s1;
+                        korisnik.Lijekovi = s1;
                     }
                     {
                         string s = DozaLijeka.Text;
@@ -125,42 +114,46 @@ namespace DiabetesTracker
                         string s2 = "";
                         for (int i = 0; i < s.Length; i++)
                         {
-                            while (s[i] != ',')
+                            while (i < s.Length && s[i] != ',')
                             {
                                 s2 += s[i];
+                                i++;
                             }
 
-                            if (s[i] == ',')
+                            if (i < s.Length && s[i] == ',')
                             {
                                 s1.Add(Convert.ToDouble(s2));
                                 s2 = "";
                             }
                         }
-                        korisnik.Terapija.DozaLijeka = s1;
-                    }
+                        korisnik.DozaLijeka = s1;
+                    }*/
                     this.Frame.Navigate(typeof(NivoGlukoze), korisnik);
                 }
                 else if (IPRadioButton.IsChecked == true)
                 {
-                    korisnik.Terapija.Tip = TipTerapije.InzulinskaPumpa;
-                    {
+                    korisnik.Tip = TipTerapije.InzulinskaPumpa;
+                    korisnik.Lijekovi = TerapijaKontrola.Naziv;
+                    korisnik.DozaLijeka = DozaLijeka.Text;
+                    /*{
                         string s = TerapijaKontrola.Naziv;
                         List<String> s1 = new List<String>();
                         string s2 = "";
                         for (int i = 0; i < s.Length; i++)
                         {
-                            while (s[i] != ',')
+                            while (i<s.Length && s[i] != ',')
                             {
                                 s2 += s[i];
+                                i++;
                             }
 
-                            if (s[i] == ',')
+                            if (i < s.Length && s[i] == ',')
                             {
                                 s1.Add(s2);
                                 s2 = "";
                             }
                         }
-                        korisnik.Terapija.Lijekovi = s1;
+                        korisnik.Lijekovi = s1;
                     }
                     {
                         string s = DozaLijeka.Text;
@@ -168,26 +161,27 @@ namespace DiabetesTracker
                         string s2 = "";
                         for (int i = 0; i < s.Length; i++)
                         {
-                            while (s[i] != ',')
+                            while (i < s.Length && s[i] != ',')
                             {
                                 s2 += s[i];
+                                i++;
                             }
 
-                            if (s[i] == ',')
+                            if (i < s.Length && s[i] == ',')
                             {
                                 s1.Add(Convert.ToDouble(s2));
                                 s2 = "";
                             }
                         }
-                        korisnik.Terapija.DozaLijeka = s1;
-                    }
+                        korisnik.DozaLijeka = s1;
+                    }*/
                     this.Frame.Navigate(typeof(NivoGlukoze), korisnik);
                 }
             }
             catch(Exception izuzetak)
             {
-                if (izuzetak.Message.Equals("Input string was not in a correct format.")) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
-                else await (new MessageDialog(izuzetak.Message)).ShowAsync();
+                //if (izuzetak.Message.Equals("Input string was not in a correct format.")) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
+                /*else*/ await (new MessageDialog(izuzetak.Message)).ShowAsync();
             }
         }
 

@@ -58,16 +58,25 @@ namespace DiabetesTracker
         {
             try
             {
-                korisnik.CiljaniNivoGlukoze = Convert.ToDouble(CiljaniBox.Text);
-                korisnik.VrijednostHipoglikemije = Convert.ToDouble(HipoBox.Text);
-                korisnik.VrijednostHiperglikemije = Convert.ToDouble(HiperBox.Text);
                 korisnik.DonjaGranicaGlukoze = Convert.ToDouble(DonjaBox.Text);
+                korisnik.CiljaniNivoGlukoze = Convert.ToDouble(CiljaniBox.Text);
                 korisnik.GornjaGranicaGlukoze = Convert.ToDouble(GornjaBox.Text);
+                korisnik.VrijednostHipoglikemije = Convert.ToDouble(HipoBox.Text);
+                korisnik.VrijednostHiperglikemije = Convert.ToDouble(HiperBox.Text);                
             }
             catch(Exception izuzetak)
             {
                 if (izuzetak.Message.Equals("Input string was not in a correct format.")) await (new MessageDialog("Morate popuniti sva polja")).ShowAsync();
                 else await (new MessageDialog(izuzetak.Message)).ShowAsync();
+            }
+            try
+            {
+                await Pomocna.dodajKorisnika(korisnik);
+                Application.Current.Exit();
+            }
+            catch(Exception izuzetak)
+            {
+                await (new MessageDialog(izuzetak.Message)).ShowAsync();
             }
         }
     }

@@ -60,7 +60,7 @@ namespace DiabetesTracker
         private async void Prijava_Click(object sender, RoutedEventArgs e)
         {
             try
-            {
+            {                
                 var korisnik = (await Pomocna.ucitajKorisnika(UsernameIPasswordKontrola.Username, UsernameIPasswordKontrola.Password));
             }
             catch(Exception izuzetak)

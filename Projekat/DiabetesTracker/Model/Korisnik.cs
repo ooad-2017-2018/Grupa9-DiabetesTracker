@@ -21,6 +21,30 @@ namespace DiabetesTracker.Model
         List<Nalaz> nalazi;
         List<Podsjetnik> podsjetnici;
         Terapija terapija;
+        TipTerapije tip;
+        String lijekovi;
+        String dozaLijeka;
+
+        public String Lijekovi
+        {
+            get => lijekovi;
+            set
+            {
+                if (String.IsNullOrEmpty(value)) throw new Exception("Morate unijeti barem jedan lijek");
+                lijekovi = value;
+            }
+        }
+        public String DozaLijeka
+        {
+            get => dozaLijeka;
+            set
+            {                
+                if (String.IsNullOrEmpty(value)) throw new Exception("Morate unijeti barem jednu dozu lijeka");
+                else dozaLijeka = value;
+            }
+        }
+
+        public TipTerapije Tip { get => tip; set => tip = value; }
 
         public string TipDijabetesa
         {
@@ -74,6 +98,7 @@ namespace DiabetesTracker.Model
                     vrijednostHiperglikemije = value;
                 else throw new Exception("Vrijednost mora biti veca od 0");
             }
+            //set { vrijednostHiperglikemije = value; }
         }
         public double VrijednostHipoglikemije
         {
@@ -84,50 +109,67 @@ namespace DiabetesTracker.Model
                     vrijednostHipoglikemije = value;
                 else throw new Exception("Vrijednost mora biti veca od 0");
             }
+            //set { vrijednostHipoglikemije = value; }
         }
         public double CiljaniNivoGlukoze
         {
             get => ciljaniNivoGlukoze;
-            set
+            /*set
             {
                 if (value > 0 && value > DonjaGranicaGlukoze && value < GornjaGranicaGlukoze)
                     ciljaniNivoGlukoze = value;
                 else
                 {
-                    if (value == 0) throw new Exception("Vrijednost mora biti veca od 0");
-                    else if (value < DonjaGranicaGlukoze) throw new Exception("Vrijednost ne smije biti manja od donje granice glukoze");
-                    else if (value > GornjaGranicaGlukoze) throw new Exception("Vrijednost ne smije biti veća od gornje granice glukoze");
+                    if (value == 0) throw new Exception("Vrijednost mora biti veca od 0Ciljani");
+                    else if (donjaGranicaGlukoze!=0 && value < DonjaGranicaGlukoze) throw new Exception("Vrijednost ne smije biti manja od donje granice glukoze");
+                    else if (gornjaGranicaGlukoze != 0 && value > GornjaGranicaGlukoze) throw new Exception("Vrijednost ne smije biti veća od gornje granice glukoze");
                 }
+            }*/
+            set
+            {
+                if (value == 0) throw new Exception("Vrijednost mora biti veca od ");
+                else ciljaniNivoGlukoze = value;
             }
         }
         public double DonjaGranicaGlukoze
         {
             get => donjaGranicaGlukoze;
-            set
+            /*set
             {
                 if (value > 0 && value < GornjaGranicaGlukoze)
                     donjaGranicaGlukoze = value;
                 else
                 {
-                    if (value == 0) throw new Exception("Vrijednost mora biti veca od 0");
-                    else if (value > GornjaGranicaGlukoze) throw new Exception("Vrijednost ne smije biti veća od gornje granice glukoze");
+                    if (value == 0) throw new Exception("Vrijednost mora biti veca od 0Donja");
+                    else if (gornjaGranicaGlukoze != 0 && value > GornjaGranicaGlukoze) throw new Exception("Vrijednost ne smije biti veća od gornje granice glukoze");
                 }
+            }*/
+            set
+            {
+                if (value == 0) throw new Exception("Vrijednost mora biti veca od 0");
+                else donjaGranicaGlukoze = value;
             }
         }
         public double GornjaGranicaGlukoze
         {
             get => gornjaGranicaGlukoze;
-            set
+            /*set
             {
                 if (value > 0 && value > DonjaGranicaGlukoze)
                     gornjaGranicaGlukoze = value;
                 else
                 {
-                    if (value == 0) throw new Exception("Vrijednost mora biti veca od 0");
-                    else if (value < DonjaGranicaGlukoze) throw new Exception("Vrijednost ne smije biti manja od donje granice glukoze");
+                    if (value == 0) throw new Exception("Vrijednost mora biti veca od 0Gornja");
+                    else if (donjaGranicaGlukoze != 0 && value < DonjaGranicaGlukoze) throw new Exception("Vrijednost ne smije biti manja od donje granice glukoze");
                 }
+            }*/
+            set
+            {
+                if (value == 0) throw new Exception("Vrijednost mora biti veca od 0");
+                else gornjaGranicaGlukoze = value;
             }
         }
+               
 
         public List<Dnevni_unos> DnevniUnosi { get => dnevniUnosi; set => dnevniUnosi = value; }
         public List<Nalaz> Nalazi { get => nalazi; set => nalazi = value; }

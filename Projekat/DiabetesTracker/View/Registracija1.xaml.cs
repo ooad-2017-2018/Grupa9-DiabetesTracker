@@ -64,6 +64,7 @@ namespace DiabetesTracker
 
             try
             {
+                await Pomocna.provjeriUsername(UserNameIPasswordTextBox.Username);
 
                 Korisnik k;
                 if (muskiButton.IsChecked == true)

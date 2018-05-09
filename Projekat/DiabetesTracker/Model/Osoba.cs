@@ -73,6 +73,16 @@ namespace DiabetesTracker.Model
         }
 
 
+        public virtual string JMBG2
+        {
+            get => JMBG;
+
+            set
+            {                
+                JMBG = value;
+            }
+        }
+
         public string Ime
         {
             get => ime;
