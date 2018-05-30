@@ -1,29 +1,29 @@
 KREACIJSKI PATERNI
 
 1.Singleton patern 
-Uloga Singleton paterna je da osigura da se klasa mo�e instancirati samo jednom i da osigura globalni pristup kreiranoj instanci klase. 
-Postoji vi�e objekata koje je potrebno samo jednom instancirati i nad kojim je potrebna jedinstvena kontrola pristupa. Neki od njih su: 
+Uloga Singleton paterna je da osigura da se klasa može instancirati samo jednom i da osigura globalni pristup kreiranoj instanci klase. 
+Postoji više objekata koje je potrebno samo jednom instancirati i nad kojim je potrebna jedinstvena kontrola pristupa. Neki od njih su: 
 thread pools (skupina niti), objekti koji upravljaju setovanjem registara, objekti koji se koriste za logiranje, objekti koji se koriste 
-kao drajveri za razne uredaje kao �to su printeri i graficke kartice. Instanciranje vi�e nego jednom navedenih objekata mogu se prouzrokovati 
-problemi kao �to su nekorektno pona�anje programa, neadekvantno kori�tenje resursa ili nekonzistentan rezultat.
+kao drajveri za razne uređaje kao što su printeri i grafičke kartice. Instanciranje više nego jednom navedenih objekata mogu se 
+prouzrokovati problemi kao što su nekorektno ponašanje programa, neadekvantno korištenje resursa ili nekonzistentan rezultat.
 
-Situacija u kojoj bi se mogao iskoristiti Singleton patern u na�oj aplikaciji jeste kreiranje admina. 
-Instanciranje vi�e od jednog admina bi moglo stvoriti problem u funkcionisanju same aplikacije, jer je u samom pocetku 
-predvideno postojanje samo jednog admina koji ce voditi racuna o statusu aplikacije.
+Situacija u kojoj bi se mogao iskoristiti Singleton patern u našoj aplikaciji jeste kreiranje admina. 
+Instanciranje više od jednog admina bi moglo stvoriti problem u funkcionisanju same aplikacije, jer je u samom početku 
+predviđeno postojanje samo jednog admina koji će voditi računa o statusu aplikacije.
 
 2.Prototype patern 
-Uloga Prototype paterna je da kreira nove objekte klonirajuci jednu od postojecih prototip instanci (postojeci objekat). 
-Ako je tro�ak kreiranja novog objekta velik i kreiranje objekta je resursno zahtjevno tada se vr�i kloniranje vec postojeceg objekata. 
-Prototype dizajn patern dozvoljava da se kreiraju prilagodeni objekti bez poznavanja njihove klase ili detalja kako je objekat kreiran.
+Uloga Prototype paterna je da kreira nove objekte klonirajući jednu od postojećih prototip instanci (postojeći objekat). 
+Ako je trošak kreiranja novog objekta velik i kreiranje objekta je resursno zahtjevno tada se vrši kloniranje već postojećeg objekata. 
+Prototype dizajn patern dozvoljava da se kreiraju prilagođeni objekti bez poznavanja njihove klase ili detalja kako je objekat kreiran.
 
-Situacija u kojoj bi se mogao iskoristiti Prototype patern u na�oj aplikaciji jeste ukoliko je i sam doktor korisnik aplikacije. 
-Na osnovu prototipa se prvo instancira objekat korisnik, a nakon toga se vr�i kloniranje objekta korisnik (klonirani objekat je doktor).
+Situacija u kojoj bi se mogao iskoristiti Prototype patern u našoj aplikaciji jeste ukoliko je i sam doktor korisnik aplikacije. 
+Na osnovu prototipa se prvo instancira objekat korisnik, a nakon toga se vrši kloniranje objekta korisnik (klonirani objekat je doktor).
 
 3.Builder patern 
 Uloga Builder paterna je odvajanje specifikacije kompleksnih objekata od njihove stvarne konstrukcije. Isti konstrukcijski 
-proces mo�e kreirati razlicite reprezentacije. Upotreba Builder paterna se cesto mo�e naci u aplikacijama u kojima se 
-kreiraju kompleksne strukture. Koristi se kada je neovisan algoritam za kreiranje pojedinacnih dijelova, kada je potrebna
-kontrola procesa konstrukcije, kada se vi�e objekata na razlicit nacin sastavlja od istih dijelova.
+proces može kreirati različite reprezentacije. Upotreba Builder paterna se često može naći u aplikacijama u kojima se 
+kreiraju kompleksne strukture. Koristi se kada je neovisan algoritam za kreiranje pojedinačnih dijelova, kada je potrebna
+kontrola procesa konstrukcije, kada se više objekata na različit način sastavlja od istih dijelova.
 
-Situacija u kojoj bi se mogao iskoristiti Builder patern u na�oj aplikaciji jeste prilikom registracije korisnika. 
-Sama registracija se sastoji od cetiri dijela. Na osnovu ovih dijelova gradi se objekat korisnik.
+Situacija u kojoj bi se mogao iskoristiti Builder patern u našoj aplikaciji jeste prilikom registracije korisnika. 
+Sama registracija se sastoji od četiri dijela. Na osnovu ovih dijelova gradi se objekat korisnik.
