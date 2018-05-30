@@ -1,0 +1,26 @@
+Strukturalni paterni:
+
+Adapter patern:
+Osnovna namjena Adapter paterna je da omoguci širu upotrebu vec postojecih klasa. U situacijama kada je potreban 
+drugaciji interfejs vec postojece klase, a ne želimo mijenjati postojecu klasu koristi se Adapter patern. 
+Adapter patern kreira novu adapter klasu koja služi kao posrednik izmedu originalne klase i željenog interfejsa. 
+Tim postupkom se dobija željena funkcionalnost bez izmjena na originalnoj klasi i bez ugrožavanja integriteta cijele aplikacije.
+
+Situacija u kojoj bi se Adapter patern mogao iskoristiti u našoj aplikaciji jeste prikaz nalaza za doktora i za korisnika. 
+Mi možemo adaptirati interfejs da u zavisnosti od toga ko je korisnik dobijamo razlicit izgled i funkcionalnosti aplikacije.
+
+Proxy patern:
+Namjena Proxy paterna je da omoguci pristup i kontrolu pristupa stvarnim objektima. Proxy je obicno mali javni 
+surogat objekat koji predstavlja kompleksni objekat cija aktivizacija se postiže na osnovu postavljenih pravila. 
+Proxy patern rješava probleme kada se objekt ne može instancirati direktno (npr. zbog restrikcije pristupa).
+
+Situacija u kojoj bi se Proxy patern mogao iskoristiti u našoj aplikaciji jeste omogucavanje I kontrola pristupa korisnicima. Klasa Osoba bi koristila Proxy za autentifikaciju korisnika.
+
+Decorator patern:
+Osnovna namjena Decorator paterna je da omoguci dinamicko dodavanje novih elemenata i ponašanja (funkcionalnosti) 
+postojecim objektima. Objekat pri tome nezna da je uradena dekoracija što je veoma korisno za iskoristljivost i ponovnu 
+upotrebu komponenti softverskog sistema. Na ilustraciji 3 je prikazana graficka upotreba Decorator paterna. Može se naprimjer 
+koristi i za implementaciju razlicitih kompresija videa, simultano prevodenje.
+
+Situacija u kojoj bi se Decorator patern mogao iskoristiti u našoj aplikaciji jeste u klasi DnevniUnos ukoliko bismo joj željeli 
+dodati nove funckionalnosti koje bi bile vezane za svaki tip unosa, tj. da svaki tip unosa ima neku svoju funkcionalnost neovisno od izvedenih klasa Hrana I NijeHrana.
