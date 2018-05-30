@@ -1,26 +1,26 @@
 Strukturalni paterni:
 
 Adapter patern:
-Osnovna namjena Adapter paterna je da omoguci �iru upotrebu vec postojecih klasa. U situacijama kada je potreban 
-drugaciji interfejs vec postojece klase, a ne �elimo mijenjati postojecu klasu koristi se Adapter patern. 
-Adapter patern kreira novu adapter klasu koja slu�i kao posrednik izmedu originalne klase i �eljenog interfejsa. 
-Tim postupkom se dobija �eljena funkcionalnost bez izmjena na originalnoj klasi i bez ugro�avanja integriteta cijele aplikacije.
+Osnovna namjena Adapter paterna je da omogući širu upotrebu vec postojećih klasa. U situacijama kada je potreban 
+drugačiji interfejs vec postojeće klase, a ne želimo mijenjati postojeću klasu koristi se Adapter patern. 
+Adapter patern kreira novu adapter klasu koja služi kao posrednik između originalne klase i željenog interfejsa. 
+Tim postupkom se dobija željena funkcionalnost bez izmjena na originalnoj klasi i bez ugrožavanja integriteta cijele aplikacije.
 
-Situacija u kojoj bi se Adapter patern mogao iskoristiti u na�oj aplikaciji jeste prikaz nalaza za doktora i za korisnika. 
-Mi mo�emo adaptirati interfejs da u zavisnosti od toga ko je korisnik dobijamo razlicit izgled i funkcionalnosti aplikacije.
+Situacija u kojoj bi se Adapter patern mogao iskoristiti u našoj aplikaciji jeste prikaz nalaza za doktora i za korisnika. 
+Mi možemo adaptirati interfejs da u zavisnosti od toga ko je korisnik dobijamo različit izgled i funkcionalnosti aplikacije.
 
 Proxy patern:
-Namjena Proxy paterna je da omoguci pristup i kontrolu pristupa stvarnim objektima. Proxy je obicno mali javni 
-surogat objekat koji predstavlja kompleksni objekat cija aktivizacija se posti�e na osnovu postavljenih pravila. 
-Proxy patern rje�ava probleme kada se objekt ne mo�e instancirati direktno (npr. zbog restrikcije pristupa).
+Namjena Proxy paterna je da omogući pristup i kontrolu pristupa stvarnim objektima. Proxy je obično mali javni 
+surogat objekat koji predstavlja kompleksni objekat čija aktivizacija se postiže na osnovu postavljenih pravila. 
+Proxy patern rješava probleme kada se objekt ne može instancirati direktno (npr. zbog restrikcije pristupa).
 
-Situacija u kojoj bi se Proxy patern mogao iskoristiti u na�oj aplikaciji jeste omogucavanje I kontrola pristupa korisnicima. Klasa Osoba bi koristila Proxy za autentifikaciju korisnika.
+Situacija u kojoj bi se Proxy patern mogao iskoristiti u našoj aplikaciji jeste omogućavanje i kontrola pristupa korisnicima.
+Klasa Osoba bi koristila Proxy za autentifikaciju korisnika.
 
 Decorator patern:
-Osnovna namjena Decorator paterna je da omoguci dinamicko dodavanje novih elemenata i pona�anja (funkcionalnosti) 
-postojecim objektima. Objekat pri tome nezna da je uradena dekoracija �to je veoma korisno za iskoristljivost i ponovnu 
-upotrebu komponenti softverskog sistema. Na ilustraciji 3 je prikazana graficka upotreba Decorator paterna. Mo�e se naprimjer 
-koristi i za implementaciju razlicitih kompresija videa, simultano prevodenje.
+Osnovna namjena Decorator paterna je da omogući dinamičko dodavanje novih elemenata i ponašanja (funkcionalnosti) 
+postojećim objektima. Objekat pri tome ne zna da je urađena dekoracija što je veoma korisno za iskoristljivost i ponovnu 
+upotrebu komponenti softverskog sistema. Može se naprimjer koristi i za implementaciju različitih kompresija videa, simultano prevođenje.
 
-Situacija u kojoj bi se Decorator patern mogao iskoristiti u na�oj aplikaciji jeste u klasi DnevniUnos ukoliko bismo joj �eljeli 
-dodati nove funckionalnosti koje bi bile vezane za svaki tip unosa, tj. da svaki tip unosa ima neku svoju funkcionalnost neovisno od izvedenih klasa Hrana I NijeHrana.
+Situacija u kojoj bi se Decorator patern mogao iskoristiti u našoj aplikaciji jeste u klasi DnevniUnos ukoliko bismo joj željeli 
+dodati nove funckionalnosti koje bi bile vezane za svaki tip unosa, tj. da svaki tip unosa ima neku svoju funkcionalnost neovisno od izvedenih klasa Hrana i NijeHrana.
