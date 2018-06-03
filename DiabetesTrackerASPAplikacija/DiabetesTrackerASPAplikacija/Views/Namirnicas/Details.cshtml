@@ -1,0 +1,58 @@
+﻿@model DiabetesTrackerASPAplikacija.Models.Namirnica
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Namirnica</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hrana.Id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hrana.Id)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Vrsta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vrsta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Secer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Secer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ugljikohidrati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ugljikohidrati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Masti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Masti)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

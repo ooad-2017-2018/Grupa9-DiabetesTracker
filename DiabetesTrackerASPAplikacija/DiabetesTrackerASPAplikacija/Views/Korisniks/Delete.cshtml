@@ -1,0 +1,200 @@
+﻿@model DiabetesTrackerASPAplikacija.Models.Korisnik
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Korisnik</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TipDijabetesa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipDijabetesa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Visina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Visina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tezina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tezina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FizickaAktivnost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FizickaAktivnost)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VrijednostHiperglikemije)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VrijednostHiperglikemije)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VrijednostHipoglikemije)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VrijednostHipoglikemije)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CiljaniNivoGlukoze)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CiljaniNivoGlukoze)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DonjaGranicaGlukoze)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DonjaGranicaGlukoze)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GornjaGranicaGlukoze)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GornjaGranicaGlukoze)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tip)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tip)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Lijekovi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Lijekovi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DozaLijeka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DozaLijeka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Spol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Spol)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prezime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prezime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PotvrdaPassworda)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PotvrdaPassworda)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JMBG1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JMBG1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Spol1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Spol1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DatumRodjenja)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DatumRodjenja)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

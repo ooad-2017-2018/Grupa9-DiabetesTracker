@@ -1,0 +1,56 @@
+﻿@model DiabetesTrackerASPAplikacija.Models.NamirnicaDodatno
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NamirnicaDodatno</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vrsta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vrsta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Secer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Secer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ugljikohidrati)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ugljikohidrati)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Masti)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Masti)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

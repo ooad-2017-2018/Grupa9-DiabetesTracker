@@ -1,0 +1,51 @@
+﻿@model IEnumerable<DiabetesTrackerASPAplikacija.Models.NamirnicaDodatno>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vrsta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Secer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ugljikohidrati)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Masti)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vrsta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Secer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ugljikohidrati)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Masti)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
