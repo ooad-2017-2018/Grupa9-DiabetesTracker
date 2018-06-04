@@ -24,21 +24,40 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Korisnik", "Index", "Korisniks")</li>                    
-                    <li>@Html.ActionLink("Profil", "Index", "Korisniks/Details/1")</li>
-                    <li>@Html.ActionLink("Mapa", "Mapa", "Home")</li>
-                    @if (User.IsInRole("Admin"))
+                    <!--<li>@Html.ActionLink("Korisnik", "Index", "Korisniks")</li>-->
+
+
+
+                    @if (User.Identity.IsAuthenticated)
                     {
-                        <li>@Html.ActionLink("Dodaj namirnicu", "Index", "NamirnicaHranaPoveznicas/Create")</li>
+                        var db = new DiabetesTrackerASPAplikacija.Models.DiabetesTrackerASPAplikacijaContext();
+                        var dajId = db.Database.SqlQuery<int>("SELECT Id FROM dbo.Korisnik WHERE " + "EMail = '" + User.Identity.Name + "'").ToList();
+                        if (dajId.Count != 0)
+                        {
+                            <li>@Html.ActionLink("Profil", "Index", "Korisniks/Details/"+dajId[0])</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Kreiraj profil", "Create", "Korisniks")</li>
+                        }
                     }
-                    @if (User.IsInRole("Doktor"))
-                    {
-                        <li>@Html.ActionLink("Dodaj nalaz", "Index", "NalazsDoktora/Create")</li>
-                    }
 
 
 
-                </ul>
+
+                        <li>@Html.ActionLink("Mapa", "Mapa", "Home")</li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>@Html.ActionLink("Dodaj namirnicu", "Index", "NamirnicaHranaPoveznicas/Create")</li>
+                        }
+                        @if (User.IsInRole("Doktor"))
+                        {
+                            <li>@Html.ActionLink("Dodaj nalaz", "Index", "NalazsDoktora/Create")</li>
+                        }
+
+
+
+                    </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>

@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using DiabetesTrackerASPAplikacija.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 
 namespace DiabetesTrackerASPAplikacija.Controllers
 {
@@ -52,9 +54,10 @@ namespace DiabetesTrackerASPAplikacija.Controllers
             if (ModelState.IsValid)
             {
                 korisnik.EMail = User.Identity.Name;
+                korisnik.Username = User.Identity.GetUserName();
                 db.Korisnik.Add(korisnik);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
             return View(korisnik);
