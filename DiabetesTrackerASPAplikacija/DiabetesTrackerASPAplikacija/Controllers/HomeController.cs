@@ -26,5 +26,7 @@ namespace DiabetesTrackerASPAplikacija.Controllers
 
             return View();
         }
+
+        public ActionResult Mapa() { return View(); }
     }
 }

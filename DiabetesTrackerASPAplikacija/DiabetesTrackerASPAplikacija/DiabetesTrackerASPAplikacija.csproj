@@ -371,6 +371,7 @@
     <Content Include="Views\Doktors\Details.cshtml" />
     <Content Include="Views\Doktors\Edit.cshtml" />
     <Content Include="Views\Doktors\Index.cshtml" />
+    <Content Include="Views\Home\Mapa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

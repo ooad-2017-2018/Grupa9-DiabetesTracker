@@ -1,0 +1,72 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2>Mapa</h2>
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+    #map {
+        height: 530px;
+        width: 100%;
+    }
+</style>
+
+<div class="row">
+    <div id="map"></div>
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: { lat: 43.856259, lng: 18.413076 },
+                zoom: 13
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 43.858621, lng: 18.408659 },
+                map: map
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 43.869159, lng: 18.415756 },
+                map: map
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 43.850122, lng: 18.37709 },
+                map: map
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 43.876808, lng: 18.40994 },
+                map: map
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 43.855090, lng: 18.399937 },
+                map: map
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 43.842930, lng: 18.325761 },
+                map: map
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 43.856274, lng: 18.424655 },
+                map: map
+            });
+
+            var marker = new google.maps.Marker({
+                position: { lat: 43.854917, lng: 18.417878 },
+                map: map
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCtKnLkWEYNBYUwCoK9F85PSYuKw1dKtbs&callback=initMap"
+            async defer></script>
+</div>
+
+

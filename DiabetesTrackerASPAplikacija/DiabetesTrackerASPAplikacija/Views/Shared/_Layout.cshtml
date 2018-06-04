@@ -26,6 +26,7 @@
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Korisnik", "Index", "Korisniks")</li>                    
                     <li>@Html.ActionLink("Profil", "Index", "Korisniks/Details/1")</li>
+                    <li>@Html.ActionLink("Mapa", "Mapa", "Home")</li>
                     @if (User.IsInRole("Admin"))
                     {
                         <li>@Html.ActionLink("Dodaj namirnicu", "Index", "NamirnicaHranaPoveznicas/Create")</li>
