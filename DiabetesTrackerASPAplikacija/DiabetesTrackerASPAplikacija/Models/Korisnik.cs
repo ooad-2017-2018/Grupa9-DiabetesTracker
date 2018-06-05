@@ -22,7 +22,7 @@ namespace DiabetesTrackerASPAplikacija.Models
         List<Dnevni_unos> dnevniUnosi;
         List<Nalaz> nalazi;
         List<Podsjetnik> podsjetnici;
-        Terapija terapija;
+        //Terapija terapija;
         TipTerapije tip;
         String lijekovi;
         String dozaLijeka;
@@ -150,7 +150,7 @@ namespace DiabetesTrackerASPAplikacija.Models
         
         public List<Dnevni_unos> DnevniUnosi { get => dnevniUnosi; set => dnevniUnosi = value; }
         public List<Nalaz> Nalazi { get => nalazi; set => nalazi = value; }
-        public Terapija Terapija1 { get => terapija; set => terapija = value; }
+        //public Terapija Terapija1 { get => terapija; set => terapija = value; }
 
         public List<Podsjetnik> Podsjetnici { get => podsjetnici; set => podsjetnici = value; }
 

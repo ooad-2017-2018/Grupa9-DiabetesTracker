@@ -4,6 +4,9 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using DiabetesTrackerASPAplikacija.Models;
@@ -18,9 +21,41 @@ namespace DiabetesTrackerASPAplikacija.Controllers
         private DiabetesTrackerASPAplikacijaContext db = new DiabetesTrackerASPAplikacijaContext();
 
         // GET: Korisniks
-        public ActionResult Index()
+         /*public ActionResult Index()
+         {
+             return View(db.Korisnik.ToList());
+         }*/
+
+        string apiUrl = "http://diabetestrackerrestapi20180603124822.azurewebsites.net/";
+        public async Task<ActionResult> Index()
         {
-            return View(db.Korisnik.ToList());
+            List<Korisnik> korisnici = new List<Korisnik>();
+            using (var client = new HttpClient())
+            {
+
+                //Postavljanje adrese URL od web api servisa
+                client.BaseAddress = new Uri(apiUrl);
+                client.DefaultRequestHeaders.Clear();
+
+                //definisanje formata koji želimo prihvatiti
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+                //Asinhrono slanje zahtjeva za podacima o korisnicima
+
+                HttpResponseMessage Res = await client.GetAsync("api/Korisniks");
+                //Provjera da li je rezultat uspješan
+                if (Res.IsSuccessStatusCode)
+                {
+                    //spremanje podataka dobijenih iz responsa
+                    var response = Res.Content.ReadAsStringAsync().Result;
+
+                    //Deserijalizacija responsa dobijenog iz apija i pretvaranje u listu studenata
+                    //korisnici = JsonConvert.DeserializeObject<List<Korisnik>>(response);
+
+                    korisnici = (List<Korisnik>)Newtonsoft.Json.JsonConvert.DeserializeObject(response, typeof(List<Korisnik>));
+                }
+
+                return View(korisnici);
+            }
         }
 
         // GET: Korisniks/Details/5
