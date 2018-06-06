@@ -34,30 +34,46 @@
                         var dajId = db.Database.SqlQuery<int>("SELECT Id FROM dbo.Korisnik WHERE " + "EMail = '" + User.Identity.Name + "'").ToList();
                         if (dajId.Count != 0)
                         {
-                            <li>@Html.ActionLink("Profil", "Index", "Korisniks/Details/"+dajId[0])</li>
+
+                            <li>@Html.ActionLink("Profil", "Index", "Korisniks/Details/" + dajId[0])</li>
                         }
                         else
                         {
                             <li>@Html.ActionLink("Kreiraj profil", "Create", "Korisniks")</li>
                         }
+
+                        var dajTerapiju = db.Database.SqlQuery<int>("SELECT dbo.Terapija.Id FROM dbo.Terapija, dbo.Korisnik WHERE " + "dbo.Korisnik.EMail = '" + User.Identity.Name + "' AND dbo.Korisnik.Id=dbo.Terapija.KorisnikId").ToList();
+                        if (dajTerapiju.Count != 0)
+                        {
+
+                            <li>@Html.ActionLink("Pregledaj terapiju", "Index", "Terapijas/Details/" + dajTerapiju[0])</li>
+                        }
+                        else
+                        {
+                            <li> @Html.ActionLink("Dodaj terapiju", "Create", "Terapijas") </li>
+                        }
+                    }
+
+
+                    <!--<li>@Html.ActionLink("Dodaj admina", "Index", "Admins/Create")</li>-->
+                    <li>@Html.ActionLink("Mapa", "Mapa", "Home")</li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>@Html.ActionLink("Dodaj namirnicu", "Create", "Namirnicas")</li>
+                        <li>@Html.ActionLink("Dodaj doktora", "Create", "Doktors")</li>
+                        <li>@Html.ActionLink("Prikazi sve korisnike", "Index", "Korisniks")</li>
+
+                    }
+                    @if (User.IsInRole("Doktor"))
+                    {
+                        <li>@Html.ActionLink("Dodaj nalaz", "Index", "NalazsDoktora/Create")</li>
                     }
 
 
 
 
-                        <li>@Html.ActionLink("Mapa", "Mapa", "Home")</li>
-                        @if (User.IsInRole("Admin"))
-                        {
-                            <li>@Html.ActionLink("Dodaj namirnicu", "Index", "NamirnicaHranaPoveznicas/Create")</li>
-                        }
-                        @if (User.IsInRole("Doktor"))
-                        {
-                            <li>@Html.ActionLink("Dodaj nalaz", "Index", "NalazsDoktora/Create")</li>
-                        }
 
-
-
-                    </ul>
+                </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>

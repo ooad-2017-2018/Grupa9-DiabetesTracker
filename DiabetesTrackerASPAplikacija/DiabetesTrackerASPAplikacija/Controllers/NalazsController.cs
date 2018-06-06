@@ -10,7 +10,6 @@ using DiabetesTrackerASPAplikacija.Models;
 
 namespace DiabetesTrackerASPAplikacija.Controllers
 {
-    [Authorize]
     public class NalazsController : Controller
     {
         private DiabetesTrackerASPAplikacijaContext db = new DiabetesTrackerASPAplikacijaContext();
@@ -40,7 +39,7 @@ namespace DiabetesTrackerASPAplikacija.Controllers
         // GET: Nalazs/Create
         public ActionResult Create()
         {
-            ViewBag.KorisnikId = new SelectList(db.Korisnik, "Id", "TipDijabetesa");
+            ViewBag.KorisnikId = new SelectList(db.Korisnik, "Id", "JMBG");
             return View();
         }
 
@@ -49,16 +48,16 @@ namespace DiabetesTrackerASPAplikacija.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,NazivFajla,KorisnikId")] Nalaz nalaz)
+        public ActionResult Create([Bind(Include = "Id,NazivFajla,TekstNalaza,KorisnikId")] Nalaz nalaz)
         {
             if (ModelState.IsValid)
             {
                 db.Nalaz.Add(nalaz);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
-            ViewBag.KorisnikId = new SelectList(db.Korisnik, "Id", "TipDijabetesa", nalaz.KorisnikId);
+            ViewBag.KorisnikId = new SelectList(db.Korisnik, "Id", "JMBG", nalaz.KorisnikId);
             return View(nalaz);
         }
 
@@ -83,7 +82,7 @@ namespace DiabetesTrackerASPAplikacija.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,NazivFajla,KorisnikId")] Nalaz nalaz)
+        public ActionResult Edit([Bind(Include = "Id,NazivFajla,TekstNalaza,KorisnikId")] Nalaz nalaz)
         {
             if (ModelState.IsValid)
             {

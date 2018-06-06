@@ -4,9 +4,14 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using DiabetesTrackerASPAplikacija.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using Microsoft.AspNet.Identity.Owin;
+using Microsoft.Owin.Security;
 
 namespace DiabetesTrackerASPAplikacija.Controllers
 {
@@ -15,6 +20,8 @@ namespace DiabetesTrackerASPAplikacija.Controllers
     {
         
         private DiabetesTrackerASPAplikacijaContext db = new DiabetesTrackerASPAplikacijaContext();
+
+        public object SecurityModule { get; private set; }
 
         // GET: Doktors
         public ActionResult Index()
@@ -52,13 +59,26 @@ namespace DiabetesTrackerASPAplikacija.Controllers
         {
             if (ModelState.IsValid)
             {
+                var store = new UserStore<ApplicationUser>(new ApplicationDbContext());
+                var manager = new UserManager<ApplicationUser>(store);
+                var user = new ApplicationUser { UserName = doktor.EMail, Email=doktor.EMail };
+
+                manager.Create(user, doktor.Password);
+
+                
+                //manager.AddToRole(user.Id, "Doktor");
+
+
+
+                var dajIdDoktora = db.Database.SqlQuery<string>("SELECT Id FROM dbo.AspNetUsers WHERE " + "Email = '" + User.Identity.Name + "'").ToList();
+                if (dajIdDoktora.Count > 0)    
                 db.Doktor.Add(doktor);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
             return View(doktor);
-        }
+        }        
 
         // GET: Doktors/Edit/5
         public ActionResult Edit(int? id)

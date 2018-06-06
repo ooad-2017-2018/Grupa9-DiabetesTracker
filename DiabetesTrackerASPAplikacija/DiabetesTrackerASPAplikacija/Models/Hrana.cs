@@ -10,15 +10,13 @@ namespace DiabetesTrackerASPAplikacija.Models
     public class Hrana: Dnevni_unos
     {
 
-        List<Namirnica> namirnice = new List<Namirnica>();
+        //List<Namirnica> namirnice = new List<Namirnica>();
         String kolicine;
 
         [Required]
         String Kolicine { get; set; }
         
-        public List<Namirnica> Namirnice { get => namirnice; }
-
-        public virtual ICollection<Namirnica> Namirnica { get; set; }
+        //public List<Namirnica> Namirnice { get => namirnice; }
 
         public int KorisnikId { get; set; }
 

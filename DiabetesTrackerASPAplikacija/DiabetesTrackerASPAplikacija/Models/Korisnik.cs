@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace DiabetesTrackerASPAplikacija.Models
 {
     public class Korisnik:Osoba
-    {        
+    {
         String tipDijabetesa;
         Double visina;
         Double tezina;
@@ -196,8 +196,7 @@ namespace DiabetesTrackerASPAplikacija.Models
         public virtual ICollection<Terapija> Terapija { get; set; }
         public virtual ICollection<UnosHrane> UnosHrane { get; set; }
         public virtual ICollection<UnosNijeHrana> UnosNijeHrana { get; set; }
-
-
+        
 
         public void dodajDnevniUnos(Dnevni_unos dnevniUnos)
         {

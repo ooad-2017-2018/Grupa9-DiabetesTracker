@@ -54,9 +54,12 @@ namespace DiabetesTrackerASPAplikacija.Controllers
         {
             if (ModelState.IsValid)
             {
+                var dajId = db.Database.SqlQuery<int>("SELECT Id FROM dbo.Korisnik WHERE " + "EMail = '" + User.Identity.Name + "'").ToList();
+                if (dajId.Count > 0)
+                    podsjetnik.KorisnikId = dajId[0];                
                 db.Podsjetnik.Add(podsjetnik);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
             ViewBag.KorisnikId = new SelectList(db.Korisnik, "Id", "TipDijabetesa", podsjetnik.KorisnikId);
@@ -130,5 +133,6 @@ namespace DiabetesTrackerASPAplikacija.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

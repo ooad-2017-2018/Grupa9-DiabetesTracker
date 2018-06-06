@@ -11,29 +11,34 @@
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Korisnik.TipDijabetesa)
-        </th>
+
+        
         <th>
             @Html.DisplayNameFor(model => model.NazivFajla)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TekstNalaza)
+        </th>
         <th></th>
     </tr>
-
-@foreach (var item in Model) {
+    @{ var db = new DiabetesTrackerASPAplikacija.Models.DiabetesTrackerASPAplikacijaContext();
+        var dajNalaze = db.Database.SqlQuery<DiabetesTrackerASPAplikacija.Models.Nalaz>("SELECT * FROM dbo.Nalaz, dbo.Korisnik WHERE " + "dbo.Korisnik.EMail = '" + User.Identity.Name + "' AND dbo.Korisnik.Id=dbo.Nalaz.KorisnikId").ToList();
+        foreach (var item in dajNalaze)
+        {
     <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Korisnik.TipDijabetesa)
-        </td>
+        
         <td>
             @Html.DisplayFor(modelItem => item.NazivFajla)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.DisplayFor(modelItem => item.TekstNalaza)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </td>
     </tr>
-}
-
+            }
+        }
 </table>

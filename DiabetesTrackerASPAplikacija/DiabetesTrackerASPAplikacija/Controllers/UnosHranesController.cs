@@ -59,7 +59,7 @@ namespace DiabetesTrackerASPAplikacija.Controllers
                     unosHrane.KorisnikId = dajId[0];
                 db.UnosHrane.Add(unosHrane);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
             ViewBag.KorisnikId = new SelectList(db.Korisnik, "Id", "TipDijabetesa", unosHrane.KorisnikId);

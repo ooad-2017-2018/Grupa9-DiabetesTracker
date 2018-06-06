@@ -207,6 +207,7 @@
     <Compile Include="Controllers\NamirnicaHranaPoveznicasController.cs" />
     <Compile Include="Controllers\NamirnicasController.cs" />
     <Compile Include="Controllers\PodsjetniksController.cs" />
+    <Compile Include="Controllers\TerapijasController.cs" />
     <Compile Include="Controllers\UnosHranesController.cs" />
     <Compile Include="Controllers\UnosNijeHranasController.cs" />
     <Compile Include="Global.asax.cs">
@@ -227,6 +228,22 @@
     <Compile Include="Migrations\201806031519270_sljedeca1.cs" />
     <Compile Include="Migrations\201806031519270_sljedeca1.Designer.cs">
       <DependentUpon>201806031519270_sljedeca1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806051939029_nova.cs" />
+    <Compile Include="Migrations\201806051939029_nova.Designer.cs">
+      <DependentUpon>201806051939029_nova.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806061700491_nova1.cs" />
+    <Compile Include="Migrations\201806061700491_nova1.Designer.cs">
+      <DependentUpon>201806061700491_nova1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806061938227_nova2.cs" />
+    <Compile Include="Migrations\201806061938227_nova2.Designer.cs">
+      <DependentUpon>201806061938227_nova2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806061946135_nova3.cs" />
+    <Compile Include="Migrations\201806061946135_nova3.Designer.cs">
+      <DependentUpon>201806061946135_nova3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -341,11 +358,6 @@
     <Content Include="Views\NamirnicaHranaPoveznicas\Details.cshtml" />
     <Content Include="Views\NamirnicaHranaPoveznicas\Edit.cshtml" />
     <Content Include="Views\NamirnicaHranaPoveznicas\Index.cshtml" />
-    <Content Include="Views\Nalazs\Create.cshtml" />
-    <Content Include="Views\Nalazs\Delete.cshtml" />
-    <Content Include="Views\Nalazs\Details.cshtml" />
-    <Content Include="Views\Nalazs\Edit.cshtml" />
-    <Content Include="Views\Nalazs\Index.cshtml" />
     <Content Include="Views\UnosHranes\Create.cshtml" />
     <Content Include="Views\UnosHranes\Delete.cshtml" />
     <Content Include="Views\UnosHranes\Details.cshtml" />
@@ -372,6 +384,17 @@
     <Content Include="Views\Doktors\Edit.cshtml" />
     <Content Include="Views\Doktors\Index.cshtml" />
     <Content Include="Views\Home\Mapa.cshtml" />
+    <Content Include="Views\Terapijas\Create.cshtml" />
+    <Content Include="Views\Terapijas\Delete.cshtml" />
+    <Content Include="Views\Terapijas\Details.cshtml" />
+    <Content Include="Views\Terapijas\Edit.cshtml" />
+    <Content Include="Views\Terapijas\Index.cshtml" />
+    <Content Include="Views\Podsjetniks\Prikaz.cshtml" />
+    <Content Include="Views\Nalazs\Create.cshtml" />
+    <Content Include="Views\Nalazs\Delete.cshtml" />
+    <Content Include="Views\Nalazs\Details.cshtml" />
+    <Content Include="Views\Nalazs\Edit.cshtml" />
+    <Content Include="Views\Nalazs\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -401,6 +424,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201806031519270_sljedeca1.resx">
       <DependentUpon>201806031519270_sljedeca1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806051939029_nova.resx">
+      <DependentUpon>201806051939029_nova.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806061700491_nova1.resx">
+      <DependentUpon>201806061700491_nova1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806061938227_nova2.resx">
+      <DependentUpon>201806061938227_nova2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806061946135_nova3.resx">
+      <DependentUpon>201806061946135_nova3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

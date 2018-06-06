@@ -11,9 +11,11 @@
 </p>
 <table class="table">
     <tr>
+        <!--
         <th>
             @Html.DisplayNameFor(model => model.Korisnik.TipDijabetesa)
         </th>
+            -->
         <th>
             @Html.DisplayNameFor(model => model.Tip)
         </th>
@@ -29,29 +31,39 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Korisnik.TipDijabetesa)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tip)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Datum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Ponavljanje)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Opis)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
-    </tr>
-}
+    @{
+        {
+            var db = new DiabetesTrackerASPAplikacija.Models.DiabetesTrackerASPAplikacijaContext();
+            var dajPodsjetnike = db.Database.SqlQuery<DiabetesTrackerASPAplikacija.Models.Podsjetnik>("SELECT * FROM dbo.Podsjetnik, dbo.Korisnik WHERE " + "dbo.Korisnik.EMail = '" + User.Identity.Name + "' AND dbo.Korisnik.Id=dbo.Podsjetnik.KorisnikId").ToList();
 
-</table>
+            foreach (var item in dajPodsjetnike)
+            {
+            <tr>
+                <!--
+                <td>
+                    @Html.DisplayFor(modelItem => item.Korisnik.TipDijabetesa)
+                </td>
+                    -->
+                <td>
+                    @Html.DisplayFor(modelItem => item.Tip)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Datum)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Ponavljanje)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Opis)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                </td>
+            </tr>
+                }
+            }
+
+        }
+    </table>

@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Korisnik.TipDijabetesa)
+            @Html.DisplayNameFor(model => model.Id)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Tip)
@@ -29,10 +29,13 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
+    @{ var db = new DiabetesTrackerASPAplikacija.Models.DiabetesTrackerASPAplikacijaContext();
+        var dajUnoseNijeHrana = db.Database.SqlQuery<DiabetesTrackerASPAplikacija.Models.UnosNijeHrana>("SELECT * FROM dbo.UnosNijeHrana, dbo.Korisnik WHERE " + "dbo.Korisnik.EMail = '" + User.Identity.Name + "' AND dbo.Korisnik.Id=dbo.UnosNijeHrana.KorisnikId").ToList();
+        foreach (var item in dajUnoseNijeHrana)
+        {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.Korisnik.TipDijabetesa)
+            @Html.DisplayFor(modelItem => item.Id)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Tip)
@@ -47,11 +50,13 @@
             @Html.DisplayFor(modelItem => item.TipKategorije)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.Id })
         </td>
     </tr>
-}
+            }
+        }
+    
 
 </table>

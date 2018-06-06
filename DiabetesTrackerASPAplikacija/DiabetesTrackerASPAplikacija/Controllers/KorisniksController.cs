@@ -90,6 +90,8 @@ namespace DiabetesTrackerASPAplikacija.Controllers
             {
                 korisnik.EMail = User.Identity.Name;
                 korisnik.Username = User.Identity.GetUserName();
+                korisnik.Password = "";
+                korisnik.PotvrdaPassworda = "";
                 db.Korisnik.Add(korisnik);
                 db.SaveChanges();
                 return RedirectToAction("Index","Home");

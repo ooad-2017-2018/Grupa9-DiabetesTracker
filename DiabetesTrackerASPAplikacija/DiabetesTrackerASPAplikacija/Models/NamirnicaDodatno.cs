@@ -21,5 +21,7 @@ namespace DiabetesTrackerASPAplikacija.Models
         [Required]
         public double Masti { get => masti; set => masti = value; }
         public int Id { get => id; set => id = value; }
+
+
     }
 }

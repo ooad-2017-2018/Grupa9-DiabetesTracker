@@ -10,6 +10,17 @@
     <h4>Podsjetnik</h4>
     <hr />
     <dl class="dl-horizontal">
+        @{ /*var db = new DiabetesTrackerASPAplikacija.Models.DiabetesTrackerASPAplikacijaContext();
+            var dajPodsjetnike = db.Database.SqlQuery<int>("SELECT Podsjetnik.Id FROM dbo.Korisnik, dbo.Podsjetnik WHERE " + "dbo.Korisnik.EMail = '" + User.Identity.Name + "' AND dbo.Korisnik.Id=dbo.Podsjetnik.KorisnikId" ).ToList();
+            if (dajPodsjetnike.Count != 0)
+            {
+
+                <li>@Html.ActionLink("Profil", "Index", "Korisniks/Details/" + dajPodsjetnike[0])</li>
+            }
+            else
+            {
+                < li > @Html.ActionLink("Kreiraj profil", "Create", "Korisniks") </ li >
+            }*/
         <dt>
             @Html.DisplayNameFor(model => model.Korisnik.TipDijabetesa)
         </dt>
@@ -49,8 +60,9 @@
         <dd>
             @Html.DisplayFor(model => model.Opis)
         </dd>
-
+            }
     </dl>
+            
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |

@@ -1,0 +1,63 @@
+﻿@model DiabetesTrackerASPAplikacija.Models.Podsjetnik
+
+@{
+    ViewBag.Title = "Pregled podsjetnika";
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <h4>Pregled podsjetnika</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        @{
+            var db = new DiabetesTrackerASPAplikacija.Models.DiabetesTrackerASPAplikacijaContext();
+            var dajPodsjetnike = db.Database.SqlQuery<DiabetesTrackerASPAplikacija.Models.Podsjetnik>("SELECT * FROM dbo.Podsjetnik, dbo.Korisnik WHERE " + "dbo.Korisnik.EMail = '" + User.Identity.Name + "' AND dbo.Korisnik.Id=dbo.Podsjetnik.KorisnikId").ToList();
+
+
+            foreach (var m in dajPodsjetnike)
+            {
+                if (m.KorisnikId == Model.KorisnikId)
+                {
+                <dt>
+                    @Html.DisplayNameFor(model => model.Tip)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Tip)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Datum)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Datum)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Ponavljanje)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Ponavljanje)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Opis)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Opis)
+                </dd>
+                    }
+                }
+            }
+    </dl>
+
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

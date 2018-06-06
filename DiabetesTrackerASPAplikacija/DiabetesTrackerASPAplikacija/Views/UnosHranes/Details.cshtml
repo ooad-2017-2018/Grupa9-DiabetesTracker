@@ -10,31 +10,38 @@
     <h4>UnosHrane</h4>
     <hr />
     <dl class="dl-horizontal">
-       <!-- <dt>
-            @Html.DisplayNameFor(model => model.Korisnik.TipDijabetesa)
-        </dt>
+        <!-- <dt>
+         @Html.DisplayNameFor(model => model.Korisnik.TipDijabetesa)
+     </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Korisnik.TipDijabetesa)
-        </dd>
-           -->
-        <dt>
-            @Html.DisplayNameFor(model => model.Datum)
-        </dt>
+     <dd>
+         @Html.DisplayFor(model => model.Korisnik.TipDijabetesa)
+     </dd>
+        -->
+        @{var db = new DiabetesTrackerASPAplikacija.Models.DiabetesTrackerASPAplikacijaContext();
+            var dajUnosHrane = db.Database.SqlQuery<DiabetesTrackerASPAplikacija.Models.UnosHrane>("SELECT * FROM dbo.UnosHrane, dbo.Korisnik WHERE " + "dbo.Korisnik.EMail = '" + User.Identity.Name + "' AND dbo.Korisnik.Id=dbo.UnosHrane.KorisnikId").ToList();
 
-        <dd>
-            @Html.DisplayFor(model => model.Datum)
-        </dd>
+            foreach (var item in dajUnosHrane)
+            {
+            <dt>
+                @Html.DisplayNameFor(model => model.Datum)
+            </dt>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TipKategorije)
-        </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Datum)
+            </dd>
 
-        <dd>
-            @Html.DisplayFor(model => model.TipKategorije)
-        </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TipKategorije)
+            </dt>
 
+            <dd>
+                @Html.DisplayFor(model => model.TipKategorije)
+            </dd>
+            }
+            }
     </dl>
+            
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |

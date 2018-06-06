@@ -53,6 +53,9 @@ namespace DiabetesTrackerASPAplikacija.Controllers
         {
             if (ModelState.IsValid)
             {
+                var dajId = db.Database.SqlQuery<int>("SELECT Id FROM dbo.Korisnik WHERE " + "EMail = '" + User.Identity.Name + "'").ToList();
+                if (dajId.Count > 0)
+                    unosNijeHrana.KorisnikId = dajId[0];
                 db.UnosNijeHrana.Add(unosNijeHrana);
                 db.SaveChanges();
                 return RedirectToAction("Index");

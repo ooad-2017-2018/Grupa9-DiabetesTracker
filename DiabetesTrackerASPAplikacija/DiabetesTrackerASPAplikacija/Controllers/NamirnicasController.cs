@@ -17,8 +17,8 @@ namespace DiabetesTrackerASPAplikacija.Controllers
         // GET: Namirnicas
         public ActionResult Index()
         {
-            var namirnica = db.Namirnica.Include(n => n.Hrana);
-            return View(namirnica.ToList());
+            //var namirnica = db.Namirnica.Include(n => n.Hrana);
+            return View(db.Namirnica.ToList());
         }
 
         // GET: Namirnicas/Details/5
@@ -52,12 +52,14 @@ namespace DiabetesTrackerASPAplikacija.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Namirnica.Add(namirnica);
+                namirnica.UnosHraneId = 1;
+                //db.Database.ExecuteSqlCommand("ALTER TABLE [dbo].[Namirnica] ALTER COLUMN [HranaId] [int] NULL");
+                db.Namirnica.Add(namirnica);               
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index","Home");
             }
 
-            ViewBag.HranaId = new SelectList(db.DnevniUnos, "Id", "Id", namirnica.HranaId);
+            ViewBag.HranaId = new SelectList(db.DnevniUnos, "Id", "Id");
             return View(namirnica);
         }
 
@@ -73,7 +75,7 @@ namespace DiabetesTrackerASPAplikacija.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.HranaId = new SelectList(db.DnevniUnos, "Id", "Id", namirnica.HranaId);
+            ViewBag.HranaId = new SelectList(db.DnevniUnos, "Id", "Id");
             return View(namirnica);
         }
 
@@ -90,7 +92,7 @@ namespace DiabetesTrackerASPAplikacija.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.HranaId = new SelectList(db.DnevniUnos, "Id", "Id", namirnica.HranaId);
+            ViewBag.HranaId = new SelectList(db.DnevniUnos, "Id", "Id");
             return View(namirnica);
         }
 
