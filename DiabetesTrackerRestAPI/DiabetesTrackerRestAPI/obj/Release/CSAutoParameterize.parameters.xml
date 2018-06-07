@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<parameters>
-  <parameter name="DiabetesTrackerModel-Web.config Connection String" description="DiabetesTrackerModel Connection String used in web.config by the application to access the database." defaultValue="data source=diabetestrackserver.database.windows.net;initial catalog=DiabetesTrackerDB;user id=diabetestrackadmin;password=11111Ab#;MultipleActiveResultSets=True;App=EntityFramework" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\Users\\zerin\\source\\repos\\DiabetesTrackerRestAPI\\DiabetesTrackerRestAPI\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DiabetesTrackerModel']/@connectionString" />
-  </parameter>
-</parameters>
