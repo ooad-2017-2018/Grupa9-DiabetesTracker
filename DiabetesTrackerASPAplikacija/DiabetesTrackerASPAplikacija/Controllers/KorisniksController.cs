@@ -26,7 +26,7 @@ namespace DiabetesTrackerASPAplikacija.Controllers
              return View(db.Korisnik.ToList());
          }*/
 
-        string apiUrl = "http://diabetestrackerrestapi20180603124822.azurewebsites.net/";
+        string apiUrl = "http://diabetestrackerapi20180607012802.azurewebsites.net/";
         public async Task<ActionResult> Index()
         {
             List<Korisnik> korisnici = new List<Korisnik>();

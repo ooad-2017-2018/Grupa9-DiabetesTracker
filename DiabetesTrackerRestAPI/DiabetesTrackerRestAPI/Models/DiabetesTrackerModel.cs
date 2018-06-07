@@ -118,7 +118,7 @@ namespace DiabetesTrackerRestAPI.Models
             modelBuilder.Entity<Terapija>()
                 .HasMany(e => e.Korisnik)
                 .WithOptional(e => e.Terapija)
-                .HasForeignKey(e => e.Terapija1_Id);
+                .HasForeignKey(e => e.Terapija_Id);
         }
     }
 }

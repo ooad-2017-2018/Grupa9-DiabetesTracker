@@ -81,7 +81,7 @@ namespace DiabetesTrackerRestAPI.Models
 
         public DateTime DatumRodjenja { get; set; }
 
-        public int? Terapija1_Id { get; set; }
+        public int? Terapija_Id { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Dnevni_unos> Dnevni_unos { get; set; }

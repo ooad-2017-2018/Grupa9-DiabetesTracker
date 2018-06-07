@@ -383,3 +383,7 @@ C:\Users\cico\Downloads\Documents\Grupa9-DiabetesTracker\DiabetesTrackerASPAplik
 C:\Users\cico\Downloads\Documents\Grupa9-DiabetesTracker\DiabetesTrackerASPAplikacija\DiabetesTrackerASPAplikacija\obj\Debug\DiabetesTrackerASPAplikacija.Migrations.nova1.resources
 C:\Users\cico\Downloads\Documents\Grupa9-DiabetesTracker\DiabetesTrackerASPAplikacija\DiabetesTrackerASPAplikacija\obj\Debug\DiabetesTrackerASPAplikacija.Migrations.nova2.resources
 C:\Users\cico\Downloads\Documents\Grupa9-DiabetesTracker\DiabetesTrackerASPAplikacija\DiabetesTrackerASPAplikacija\obj\Debug\DiabetesTrackerASPAplikacija.Migrations.nova3.resources
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\DiabetesTrackerASPAplikacija\DiabetesTrackerASPAplikacija\obj\Debug\DiabetesTrackerASPAplikacija.Migrations.nova.resources
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\DiabetesTrackerASPAplikacija\DiabetesTrackerASPAplikacija\obj\Debug\DiabetesTrackerASPAplikacija.Migrations.nova1.resources
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\DiabetesTrackerASPAplikacija\DiabetesTrackerASPAplikacija\obj\Debug\DiabetesTrackerASPAplikacija.Migrations.nova2.resources
+C:\Users\zerin\Desktop\Grupa9-DiabetesTracker\DiabetesTrackerASPAplikacija\DiabetesTrackerASPAplikacija\obj\Debug\DiabetesTrackerASPAplikacija.Migrations.nova3.resources
