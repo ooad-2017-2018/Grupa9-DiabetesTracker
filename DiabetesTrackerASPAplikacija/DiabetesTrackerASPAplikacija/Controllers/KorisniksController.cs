@@ -48,7 +48,7 @@ namespace DiabetesTrackerASPAplikacija.Controllers
                     //spremanje podataka dobijenih iz responsa
                     var response = Res.Content.ReadAsStringAsync().Result;
 
-                    //Deserijalizacija responsa dobijenog iz apija i pretvaranje u listu studenata
+                    //Deserijalizacija responsa dobijenog iz apija i pretvaranje u listu korisnika
                     //korisnici = JsonConvert.DeserializeObject<List<Korisnik>>(response);
 
                     korisnici = (List<Korisnik>)Newtonsoft.Json.JsonConvert.DeserializeObject(response, typeof(List<Korisnik>));
