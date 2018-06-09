@@ -11,7 +11,9 @@ namespace DiabetesTracker.Model
         TipTerapije tip;
         List<String> lijekovi;
         List<double> dozaLijeka;
-
+        
+        
+        //refactoring replace error code with exception
         public List<string> Lijekovi {
             get => lijekovi;
             set

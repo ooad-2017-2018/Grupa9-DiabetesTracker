@@ -11,7 +11,8 @@ namespace DiabetesTracker.Model
         TipUnosa tip;
         Double vrijednost;
 
-        public TipUnosa Tip { get => tip; set => tip = value; }
-        public double Vrijednost { get => vrijednost; set => vrijednost = value; }
+        //refactoring:remove setting method
+        public TipUnosa Tip { get => tip; }
+        public double Vrijednost { get => vrijednost; }
     }
 }

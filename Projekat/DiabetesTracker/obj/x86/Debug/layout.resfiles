@@ -6,5 +6,13 @@ Assets\Square44x44Logo.scale-200.png
 Assets\Square44x44Logo.targetsize-24_altform-unplated.png
 Assets\StoreLogo.png
 Assets\Wide310x150Logo.scale-200.png
+App.xbf
 DiabetesTracker.xr.xml
+View\NivoGlukoze.xbf
+View\Prijava.xbf
+View\Registracija1.xbf
+View\Registracija2.xbf
+View\Terapija.xbf
+View\TerapijaKontrola.xbf
+View\UsernameIPasswordUserControl.xbf
 Properties\Default.rd.xml

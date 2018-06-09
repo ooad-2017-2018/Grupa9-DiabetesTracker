@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Windows.UI.Popups;
 using DiabetesTracker.Model;
 using Microsoft.WindowsAzure.MobileServices;
+using static DiabetesTracker.Model.AutentificationProxy;
 
 namespace DiabetesTracker
 {
@@ -14,15 +15,24 @@ namespace DiabetesTracker
     {
         public static async Task<Korisnik> ucitajKorisnika(string username, string password = "")
         {
+            ProtectionProxy subject1 = new ProtectionProxy();
+            subject1.Request();
+            
             IMobileServiceTable<Korisnik> tabelaKorisnik = App.MobileService.GetTable<Korisnik>();
             var polja = from a in tabelaKorisnik where a.Username == username select a;
             var lista = await polja.ToListAsync();
             if (lista.Count != 1)
                 throw new Exception("Korisnik ne postoji");
             var x = lista[0];
-            if (x.Password != password && password != "")
-                throw new Exception("Pogresan password");            
+            /*if (x.Password != password && password != "")
+                throw new Exception("Pogresan password");            */
             Korisnik korisnik = null;
+
+            
+            
+            
+            subject1.Password=x.Password;
+            (subject1 as ProtectionProxy).Authenticate(password);
 
             korisnik = new Korisnik
             {
@@ -112,6 +122,14 @@ namespace DiabetesTracker
             var polja = from a in tabelaKorisnika where a.Username == username select a;
             var lista = await polja.ToListAsync();
             if (lista.Count != 0) throw new Exception("Dati username nije slobodan");
+        }
+
+        public static async Task<List<Korisnik>> dajPassworde()
+        {
+            IMobileServiceTable<Korisnik> tabelaKorisnika = App.MobileService.GetTable<Korisnik>();
+            var polja = from a in tabelaKorisnika select a;
+            var lista = await polja.ToListAsync();
+            return lista;
         }
     }
 }

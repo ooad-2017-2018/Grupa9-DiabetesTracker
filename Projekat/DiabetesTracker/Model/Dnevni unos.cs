@@ -11,7 +11,9 @@ namespace DiabetesTracker.Model
         DateTime datum;
         Kategorije tipKategorije;
 
-        public DateTime Datum { get => datum; set => datum = value; }
-        public Kategorije TipKategorije { get => tipKategorije; set => tipKategorije = value; }
+
+        //refactoring:remove setting method
+        public DateTime Datum { get => datum; }
+        public Kategorije TipKategorije { get => tipKategorije; }
     }
 }

@@ -11,6 +11,7 @@ namespace DiabetesTracker.Model
         List<Namirnica> namirnice = new List<Namirnica>();
         List<int> kolicine = new List<int>();
 
+        //refactoring:remove setting method
         public List<int> Kolicine { get => kolicine; }
         public List<Namirnica> Namirnice { get => namirnice; }
     }

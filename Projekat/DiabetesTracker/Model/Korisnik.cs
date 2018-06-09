@@ -25,6 +25,7 @@ namespace DiabetesTracker.Model
         String lijekovi;
         String dozaLijeka;
 
+        //refactoring replace error code with exception
         public String Lijekovi
         {
             get => lijekovi;

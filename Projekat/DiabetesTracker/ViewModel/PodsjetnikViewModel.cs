@@ -17,10 +17,10 @@ namespace DiabetesTracker.ViewModel
         }
 
         public Podsjetnik Podsjetnik { get => podsjetnik; set => podsjetnik = value; }
-        public TipPodsjetnika Tip { get => podsjetnik.Tip; set => podsjetnik.Tip = value; }
-        public DateTime Datum { get => podsjetnik.Datum; set => podsjetnik.Datum = value; }
-        public Ponavljanja Ponavljanje { get => podsjetnik.Ponavljanje; set => podsjetnik.Ponavljanje = value; }
-        public string Opis { get => podsjetnik.Opis; set => podsjetnik.Opis = value; }
+        public TipPodsjetnika Tip { get => podsjetnik.Tip; }
+        public DateTime Datum { get => podsjetnik.Datum; }
+        public Ponavljanja Ponavljanje { get => podsjetnik.Ponavljanje; }
+        public string Opis { get => podsjetnik.Opis; }
 
     }
 }

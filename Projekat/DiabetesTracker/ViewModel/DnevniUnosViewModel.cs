@@ -18,8 +18,8 @@ namespace DiabetesTracker.ViewModel
             this.dnevniUnos = dnevniUnos;
         }
 
-        public DateTime Datum { get => dnevniUnos.Datum; set => dnevniUnos.Datum = value; }
-        public Kategorije TipKategorije { get => dnevniUnos.TipKategorije; set => dnevniUnos.TipKategorije = value; }
+        public DateTime Datum { get => dnevniUnos.Datum; }
+        public Kategorije TipKategorije { get => dnevniUnos.TipKategorije; }
         public Dnevni_unos DnevniUnos { get => dnevniUnos; set => dnevniUnos = value; }
         public HranaViewModel Dijete1 { get => dijete1; set => dijete1 = value; }
         public NijeHranaViewModel Dijete2 { get => dijete2; set => dijete2 = value; }

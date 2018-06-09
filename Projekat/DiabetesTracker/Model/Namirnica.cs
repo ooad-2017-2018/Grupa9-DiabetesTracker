@@ -19,9 +19,10 @@ namespace DiabetesTracker.Model
             this.masti = masti;
         }
 
-        public string Vrsta { get => vrsta; set => vrsta = value; }
-        public double Secer { get => secer; set => secer = value; }
-        public double Ugljikohidrati { get => ugljikohidrati; set => ugljikohidrati = value; }
-        public double Masti { get => masti; set => masti = value; }
+        //refactoring:remove setting method
+        public string Vrsta { get => vrsta; }
+        public double Secer { get => secer; }
+        public double Ugljikohidrati { get => ugljikohidrati; }
+        public double Masti { get => masti; }
     }
 }

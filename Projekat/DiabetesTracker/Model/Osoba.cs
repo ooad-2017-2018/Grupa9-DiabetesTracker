@@ -8,8 +8,9 @@ using System.Collections;
 
 namespace DiabetesTracker.Model
 {
-    public class Osoba:INotifyPropertyChanged, INotifyDataErrorInfo
+    public class Osoba: AutentificationProxy,INotifyPropertyChanged, INotifyDataErrorInfo
     {
+
         String id;
         String ime;
         String prezime;
@@ -25,6 +26,7 @@ namespace DiabetesTracker.Model
         public virtual Spol Spol { get => spol; set => spol = value; }
 
 
+        //refactoring replace error code with exception
         public virtual string JMBG1
         {
             get => JMBG;

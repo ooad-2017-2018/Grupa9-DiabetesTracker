@@ -19,7 +19,7 @@ namespace DiabetesTracker.ViewModel
 
         public Nije_hrana NijeHrana { get => nijeHrana; set => nijeHrana = value; }
         public DnevniUnosViewModel Parent { get => parent; set => parent = value; }
-        public TipUnosa Tip { get => nijeHrana.Tip; set => nijeHrana.Tip = value; }
-        public double Vrijednost { get => nijeHrana.Vrijednost; set => nijeHrana.Vrijednost = value; }
+        public TipUnosa Tip { get => nijeHrana.Tip; }
+        public double Vrijednost { get => nijeHrana.Vrijednost; }
     }
 }

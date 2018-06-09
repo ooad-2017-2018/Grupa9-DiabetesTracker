@@ -96,6 +96,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Admin.cs" />
+    <Compile Include="Model\AutentificationProxy.cs" />
     <Compile Include="Model\Dnevni unos.cs" />
     <Compile Include="Model\Doktor.cs" />
     <Compile Include="Model\Hrana.cs" />

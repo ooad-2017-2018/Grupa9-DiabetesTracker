@@ -66,6 +66,8 @@ namespace DiabetesTracker
                     await (new MessageDialog("Polja moraju biti popunjena")).ShowAsync();
                 else if (UsernameIPasswordKontrola.Username.Length != 0 && UsernameIPasswordKontrola.Password.Length != 0)
                 {
+                    
+
                     var korisnik = (await Pomocna.ucitajKorisnika(UsernameIPasswordKontrola.Username, UsernameIPasswordKontrola.Password));
                 }
             }

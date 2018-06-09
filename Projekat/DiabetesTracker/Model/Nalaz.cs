@@ -12,7 +12,8 @@ namespace DiabetesTracker.Model
         String nazivFajla;
         BitmapImage slika;
 
-        public string NazivFajla { get => nazivFajla; set => nazivFajla = value; }
-        public BitmapImage Slika { get => slika; set => slika = value; }
+        //refactoring:remove setting method
+        public string NazivFajla { get => nazivFajla; }
+        public BitmapImage Slika { get => slika; }
     }
 }
