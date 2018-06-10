@@ -196,14 +196,16 @@ namespace DiabetesTrackerASPAplikacija.Models
         public virtual ICollection<Terapija> Terapija { get; set; }
         public virtual ICollection<UnosHrane> UnosHrane { get; set; }
         public virtual ICollection<UnosNijeHrana> UnosNijeHrana { get; set; }
-        
 
-        public void dodajDnevniUnos(Dnevni_unos dnevniUnos)
+
+        //omogucava dodavanje dnevnog unosa korisniku aplikacije
+        public void DodajDnevniUnosKorisnik(Dnevni_unos dnevniUnos)
         {
             dnevniUnosi.Add(dnevniUnos);
         }
 
-        public void dodajNalaz(Nalaz nalaz)
+        //omogucava dodavanje nalaza u listu nalaza korisnika aplikacije
+        public void DodajNalazKorisnik(Nalaz nalaz)
         {
             nalazi.Add(nalaz);
         }
@@ -214,8 +216,8 @@ namespace DiabetesTrackerASPAplikacija.Models
 
 
 
-
-        public void dodajPodsjetnik(Podsjetnik podsjetnik)
+        //omogucava dodavanje novog podsjetnika u listu podsjetnika korisnika aplikacije
+        public void DodajPodsjetnikKorisnik(Podsjetnik podsjetnik)
         {
             podsjetnici.Add(podsjetnik);
         }

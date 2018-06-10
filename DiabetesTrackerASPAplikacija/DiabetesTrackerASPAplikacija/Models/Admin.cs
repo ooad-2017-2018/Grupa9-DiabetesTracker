@@ -9,9 +9,10 @@ namespace DiabetesTrackerASPAplikacija.Models
     public class Admin:Osoba
     {
 
-        
 
-        public void dodajNamirnicu(String vrsta, Double secer, Double ugljikohidrati, Double masti)
+
+        //omogucava dodavanje nove namirnice pri cemu se navodi vrsta, kolicina secera, masti i ugljikohodrata same namirnice
+        public void DodajNamirnicuAdmin(String vrsta, Double secer, Double ugljikohidrati, Double masti)
         {
 
         }

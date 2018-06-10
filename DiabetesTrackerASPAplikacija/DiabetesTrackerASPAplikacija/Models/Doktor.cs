@@ -8,12 +8,13 @@ namespace DiabetesTrackerASPAplikacija.Models
 {
     public class Doktor:Osoba
     {
-        public void dodajNalaz(String JMBG)
+        //omogućava dodavanje nalaza pacijenta od strane doktora
+        public void DodajNalazDoktor(String JMBG)
         {
 
         }
-
-        public void pregledNalaza(String JMBG)
+        //omogućava pregled nalaza pacijenta, koji se raspoznaje na osnovu JMBG-a
+        public void PregledNalazaDoktor(String JMBG)
         {
 
         }

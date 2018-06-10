@@ -178,13 +178,14 @@ namespace DiabetesTracker.Model
 
         public List<Podsjetnik> Podsjetnici { get => podsjetnici; set => podsjetnici = value; }
 
-
-        public void dodajDnevniUnos(Dnevni_unos dnevniUnos)
+        //omogucava dodavanje dnevnog unosa korisniku aplikacije
+        public void DodajDnevniUnosKorisnik(Dnevni_unos dnevniUnos)
         {
             dnevniUnosi.Add(dnevniUnos);
         }
 
-        public void dodajNalaz(Nalaz nalaz)
+        //omogucava dodavanje nalaza u listu nalaza korisnika aplikacije
+        public void DodajNalazKorisnik(Nalaz nalaz)
         {
             nalazi.Add(nalaz);
         }
@@ -195,8 +196,8 @@ namespace DiabetesTracker.Model
 
 
 
-
-        public void dodajPodsjetnik(Podsjetnik podsjetnik)
+        //omogucava dodavanje novog podsjetnika u listu podsjetnika korisnika aplikacije
+        public void DodajPodsjetnikKorisnik(Podsjetnik podsjetnik)
         {
             podsjetnici.Add(podsjetnik);
         }
